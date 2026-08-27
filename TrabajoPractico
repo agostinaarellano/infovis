@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Trabajo Práctico Infovis</title>
+ 
+
+</head>
+<body>
+  
+  <hr/>
+  <h1>DataWrapper</h1>
+  <div style="min-height:427px" id="datawrapper-vis-05SW9"><script type="text/javascript" defer src="https://datawrapper.dwcdn.net/05SW9/embed.js" charset="utf-8" data-target="#datawrapper-vis-05SW9"></script><noscript><img src="https://datawrapper.dwcdn.net/05SW9/full.png" alt="¿Cuántos pasos caminé cada día de Junio? (Gráfico de columnas)" /></noscript></div>
+  <hr/>
+
+
+</body>
+</html>
