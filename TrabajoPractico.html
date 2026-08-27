@@ -1,20 +1,137 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Trabajo Práctico Infovis</title>
- 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <title>Mi vida en datos - Agostina Arellano</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #fdf0f6;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #3f3540;
+    }
+
+    .contenedor {
+      width: 90%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 50px 0;
+    }
+
+    /* Título principal */
+    .encabezado {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .encabezado h1 {
+      font-size: 38px;
+      margin-bottom: 12px;
+      color: #6d4b61;
+    }
+
+    .encabezado p {
+      font-size: 18px;
+      color: #806f7a;
+      margin-top: 0;
+    }
+
+    /* Cada visualización */
+    .visualizacion {
+      background-color: white;
+      border-radius: 18px;
+      padding: 30px;
+      margin-bottom: 40px;
+
+      box-shadow: 0 6px 20px rgba(100, 60, 90, 0.10);
+    }
+
+    .visualizacion h2 {
+      text-align: center;
+      font-size: 25px;
+      color: #6d4b61;
+      margin-top: 0;
+      margin-bottom: 25px;
+    }
+
+    /* Línea decorativa */
+    .decoracion {
+      width: 60px;
+      height: 4px;
+      background-color: #d9a6bd;
+      border-radius: 10px;
+      margin: 0 auto 25px auto;
+    }
+
+    /* Datawrapper */
+    .grafico {
+      width: 100%;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+
+    hr {
+      display: none;
+    }
+
+    /* Pie de página */
+    .footer {
+      text-align: center;
+      color: #8d7c87;
+      font-size: 14px;
+      margin-top: 50px;
+    }
+  </style>
 </head>
-  <h1>Trabajo Práctico Infovis - Agostina Arellano</h1>
-<body>
-  
-  <hr/>
-  <h1>DataWrapper</h1>
-  <div style="min-height:427px" id="datawrapper-vis-05SW9"><script type="text/javascript" defer src="https://datawrapper.dwcdn.net/05SW9/embed.js" charset="utf-8" data-target="#datawrapper-vis-05SW9"></script><noscript><img src="https://datawrapper.dwcdn.net/05SW9/full.png" alt="¿Cuántos pasos caminé cada día de Junio? (Gráfico de columnas)" /></noscript></div>
-  <hr/>
 
+<body>
+
+  <div class="contenedor">
+
+    <!-- ENCABEZADO -->
+    <div class="encabezado">
+      <h1>Mi vida en datos</h1>
+      <p>Un recorrido por mis hábitos de actividad y descanso</p>
+    </div>
+
+
+    <!-- PRIMERA VISUALIZACIÓN -->
+    <section class="visualizacion">
+
+      <h2>¿Cuántos pasos caminé cada día de junio?</h2>
+
+      <div class="decoracion"></div>
+
+      <div class="grafico">
+        <div style="min-height:427px" id="datawrapper-vis-05SW9">
+          <script
+            type="text/javascript"
+            defer
+            src="https://datawrapper.dwcdn.net/05SW9/embed.js"
+            charset="utf-8"
+            data-target="#datawrapper-vis-05SW9">
+          </script>
+
+          <noscript>
+            <img
+              src="https://datawrapper.dwcdn.net/05SW9/full.png"
+              alt="¿Cuántos pasos caminé cada día de Junio? (Gráfico de columnas)">
+          </noscript>
+        </div>
+      </div>
+
+    </section>
+
+
+    <div class="footer">
+      Trabajo Práctico de Visualización de Datos · Agostina Arellano
+    </div>
+
+  </div>
 
 </body>
 </html>
