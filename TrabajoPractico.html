@@ -6,28 +6,87 @@
 
   <title>Mi vida en datos - Agostina Arellano</title>
 
-  <!-- Fuente divertida para el título -->
+  <!-- Fuentes -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
 
   <style>
+
     body {
       margin: 0;
       padding: 0;
       background-color: #fdf0f6;
       font-family: 'Quicksand', Arial, Helvetica, sans-serif;
       color: #3f3540;
+      overflow-x: hidden;
+      position: relative;
     }
+
+
+    /* ----------------------------- */
+    /* GARABATOS DEL FONDO */
+    /* ----------------------------- */
+
+    .garabato {
+      position: absolute;
+      z-index: 0;
+      pointer-events: none;
+      opacity: 0.25;
+    }
+
+    .garabato-1 {
+      top: 130px;
+      left: 2%;
+      font-size: 90px;
+      color: #d99ab7;
+      transform: rotate(-20deg);
+    }
+
+    .garabato-2 {
+      top: 400px;
+      right: 2%;
+      font-size: 80px;
+      color: #d99ab7;
+      transform: rotate(25deg);
+    }
+
+    .garabato-3 {
+      top: 750px;
+      left: 4%;
+      font-size: 70px;
+      color: #d99ab7;
+      transform: rotate(15deg);
+    }
+
+    .garabato-4 {
+      top: 850px;
+      right: 5%;
+      font-size: 75px;
+      color: #d99ab7;
+      transform: rotate(-10deg);
+    }
+
+
+    /* ----------------------------- */
+    /* CONTENEDOR GENERAL */
+    /* ----------------------------- */
 
     .contenedor {
       width: 90%;
       max-width: 1100px;
       margin: 0 auto;
       padding: 50px 0;
+      position: relative;
+      z-index: 1;
     }
 
-    /* Título principal */
+
+    /* ----------------------------- */
+    /* ENCABEZADO */
+    /* ----------------------------- */
+
     .encabezado {
       text-align: center;
       margin-bottom: 45px;
@@ -35,7 +94,7 @@
 
     .encabezado h1 {
       font-family: 'Pacifico', cursive;
-      font-size: 58px;
+      font-size: 64px;
       margin-bottom: 15px;
       color: #6d4b61;
       font-weight: 400;
@@ -47,52 +106,171 @@
       margin-top: 0;
     }
 
-    /* Cada visualización */
+
+    /* ----------------------------- */
+    /* CAJA DEL GRÁFICO */
+    /* ----------------------------- */
+
     .visualizacion {
       background-color: white;
       border-radius: 18px;
       padding: 30px;
-      margin-bottom: 40px;
+      margin-bottom: 25px;
       box-shadow: 0 6px 20px rgba(100, 60, 90, 0.10);
     }
 
-    /* Datawrapper */
     .grafico {
       width: 100%;
       overflow: hidden;
       border-radius: 10px;
     }
 
-    hr {
-      display: none;
+
+    /* ----------------------------- */
+    /* TARJETA PROMEDIO */
+    /* ----------------------------- */
+
+    .tarjeta-promedio {
+      background-color: #e8b6ca;
+      border-radius: 18px;
+
+      padding: 28px 35px;
+
+      margin: 25px auto 45px auto;
+
+      box-shadow: 0 6px 18px rgba(109, 75, 97, 0.12);
+
+      transition:
+        background-color 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+
+      cursor: default;
     }
 
-    /* Pie de página */
+
+    /* EFECTO AL PASAR EL MOUSE */
+
+    .tarjeta-promedio:hover {
+      background-color: #d99ab7;
+
+      transform: translateY(-4px);
+
+      box-shadow: 0 10px 24px rgba(109, 75, 97, 0.20);
+    }
+
+
+    .titulo-promedio {
+      font-size: 17px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+
+      color: #664455;
+
+      margin-bottom: 12px;
+    }
+
+
+    .numero-promedio {
+      font-size: 45px;
+      font-weight: 700;
+
+      color: #ffffff;
+
+      margin-bottom: 5px;
+    }
+
+
+    .descripcion-promedio {
+      font-size: 17px;
+      color: #714f60;
+    }
+
+
+    /* ----------------------------- */
+    /* FOOTER */
+    /* ----------------------------- */
+
     .footer {
       text-align: center;
       color: #8d7c87;
       font-size: 14px;
       margin-top: 50px;
     }
+
+
+    /* ----------------------------- */
+    /* RESPONSIVE */
+    /* ----------------------------- */
+
+    @media (max-width: 700px) {
+
+      .encabezado h1 {
+        font-size: 46px;
+      }
+
+      .visualizacion {
+        padding: 18px;
+      }
+
+      .numero-promedio {
+        font-size: 37px;
+      }
+
+      .garabato {
+        opacity: 0.15;
+      }
+
+    }
+
   </style>
+
 </head>
+
 
 <body>
 
+
+  <!-- GARABATOS DECORATIVOS -->
+
+  <div class="garabato garabato-1">〰</div>
+
+  <div class="garabato garabato-2">⌁</div>
+
+  <div class="garabato garabato-3">♡</div>
+
+  <div class="garabato garabato-4">✦</div>
+
+
+
   <div class="contenedor">
 
+
     <!-- ENCABEZADO -->
+
     <div class="encabezado">
+
       <h1>Mi vida en datos</h1>
-      <p>Un recorrido por mis hábitos de actividad y descanso</p>
+
+      <p>
+        Un recorrido por mis hábitos de actividad y descanso
+      </p>
+
     </div>
 
 
-    <!-- PRIMERA VISUALIZACIÓN -->
+
+    <!-- GRÁFICO DATAWRAPPER -->
+
     <section class="visualizacion">
 
       <div class="grafico">
-        <div style="min-height:427px" id="datawrapper-vis-05SW9">
+
+        <div
+          style="min-height:427px"
+          id="datawrapper-vis-05SW9">
+
           <script
             type="text/javascript"
             defer
@@ -102,19 +280,47 @@
           </script>
 
           <noscript>
+
             <img
               src="https://datawrapper.dwcdn.net/05SW9/full.png"
-              alt="¿Cuántos pasos caminé cada día de Junio? (Gráfico de columnas)">
+              alt="¿Cuántos pasos caminé cada día de Junio? (Gráfico de columnas)" />
+
           </noscript>
+
         </div>
+
       </div>
 
     </section>
 
 
+
+    <!-- TARJETA PROMEDIO -->
+
+    <div class="tarjeta-promedio">
+
+      <div class="titulo-promedio">
+        👟 PROMEDIO DIARIO DE PASOS EN JUNIO
+      </div>
+
+      <div class="numero-promedio">
+        8.295 pasos
+      </div>
+
+      <div class="descripcion-promedio">
+        Promedio de pasos caminados por día durante junio
+      </div>
+
+    </div>
+
+
+
+    <!-- PIE DE PÁGINA -->
+
     <div class="footer">
       Trabajo Práctico de Visualización de Datos · Agostina Arellano
     </div>
+
 
   </div>
 
