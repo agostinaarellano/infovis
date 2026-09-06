@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Mi vida en datos - Agostina Arellano</title>
+  <title>Junio en movimiento y descanso - Agostina Arellano</title>
 
   <!-- Fuentes -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,50 +24,28 @@
       position: relative;
     }
 
-
     /* ----------------------------- */
-    /* GARABATOS DEL FONDO */
+    /* GARABATOS DE FONDO */
     /* ----------------------------- */
 
     .garabato {
       position: absolute;
       z-index: 0;
       pointer-events: none;
-      opacity: 0.25;
-    }
-
-    .garabato-1 {
-      top: 130px;
-      left: 2%;
-      font-size: 90px;
+      opacity: 0.22;
       color: #d99ab7;
-      transform: rotate(-20deg);
     }
 
-    .garabato-2 {
-      top: 400px;
-      right: 2%;
-      font-size: 80px;
-      color: #d99ab7;
-      transform: rotate(25deg);
-    }
-
-    .garabato-3 {
-      top: 750px;
-      left: 4%;
-      font-size: 70px;
-      color: #d99ab7;
-      transform: rotate(15deg);
-    }
-
-    .garabato-4 {
-      top: 850px;
-      right: 5%;
-      font-size: 75px;
-      color: #d99ab7;
-      transform: rotate(-10deg);
-    }
-
+    .garabato-1  { top: 80px; left: 3%; font-size: 85px; transform: rotate(-18deg); }
+    .garabato-2  { top: 210px; right: 4%; font-size: 70px; transform: rotate(20deg); }
+    .garabato-3  { top: 470px; left: 2%; font-size: 75px; transform: rotate(12deg); }
+    .garabato-4  { top: 650px; right: 2%; font-size: 90px; transform: rotate(-10deg); }
+    .garabato-5  { top: 900px; left: 4%; font-size: 65px; transform: rotate(16deg); }
+    .garabato-6  { top: 1100px; right: 5%; font-size: 80px; transform: rotate(-16deg); }
+    .garabato-7  { top: 1350px; left: 3%; font-size: 75px; transform: rotate(8deg); }
+    .garabato-8  { top: 1550px; right: 3%; font-size: 70px; transform: rotate(-8deg); }
+    .garabato-9  { top: 1770px; left: 6%; font-size: 85px; transform: rotate(22deg); }
+    .garabato-10 { top: 1980px; right: 4%; font-size: 75px; transform: rotate(-12deg); }
 
     /* ----------------------------- */
     /* CONTENEDOR GENERAL */
@@ -82,33 +60,61 @@
       z-index: 1;
     }
 
-
     /* ----------------------------- */
     /* ENCABEZADO */
     /* ----------------------------- */
 
     .encabezado {
       text-align: center;
-      margin-bottom: 45px;
+      margin-bottom: 55px;
     }
 
     .encabezado h1 {
       font-family: 'Pacifico', cursive;
-      font-size: 64px;
+      font-size: 62px;
       margin-bottom: 15px;
       color: #6d4b61;
       font-weight: 400;
     }
 
     .encabezado p {
-      font-size: 19px;
+      font-size: 20px;
       color: #806f7a;
-      margin-top: 0;
+      margin: 0 auto;
+      max-width: 750px;
+      line-height: 1.6;
     }
 
+    /* ----------------------------- */
+    /* TÍTULOS DE SECCIÓN */
+    /* ----------------------------- */
+
+    .seccion-titulo {
+      text-align: center;
+      margin: 25px 0 25px 0;
+    }
+
+    .seccion-titulo span {
+      display: inline-block;
+      padding: 10px 22px;
+      border-radius: 999px;
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    .seccion-actividad span {
+      background-color: #f4c9d9;
+      color: #6d4b61;
+    }
+
+    .seccion-sueno span {
+      background-color: #e0cef4;
+      color: #6e4b8c;
+    }
 
     /* ----------------------------- */
-    /* CAJA DEL GRÁFICO */
+    /* CAJAS DE VISUALIZACIÓN */
     /* ----------------------------- */
 
     .visualizacion {
@@ -125,68 +131,113 @@
       border-radius: 10px;
     }
 
-
     /* ----------------------------- */
-    /* TARJETA PROMEDIO */
+    /* TARJETAS PROMEDIO */
     /* ----------------------------- */
 
     .tarjeta-promedio {
-      background-color: #e8b6ca;
       border-radius: 18px;
-
       padding: 28px 35px;
-
-      margin: 25px auto 45px auto;
-
-      box-shadow: 0 6px 18px rgba(109, 75, 97, 0.12);
+      margin: 25px auto 55px auto;
+      cursor: default;
 
       transition:
         background-color 0.25s ease,
         transform 0.25s ease,
         box-shadow 0.25s ease;
-
-      cursor: default;
     }
 
+    /* TARJETA PASOS */
 
-    /* EFECTO AL PASAR EL MOUSE */
+    .tarjeta-pasos {
+      background-color: #e8b6ca;
+      box-shadow: 0 6px 18px rgba(109, 75, 97, 0.12);
+    }
 
-    .tarjeta-promedio:hover {
+    .tarjeta-pasos:hover {
       background-color: #d99ab7;
-
       transform: translateY(-4px);
-
       box-shadow: 0 10px 24px rgba(109, 75, 97, 0.20);
     }
 
+    .tarjeta-pasos .titulo-promedio {
+      color: #664455;
+    }
+
+    .tarjeta-pasos .descripcion-promedio {
+      color: #714f60;
+    }
+
+    /* TARJETA SUEÑO */
+
+    .tarjeta-sueno {
+      background-color: #cdb3e6;
+      box-shadow: 0 6px 18px rgba(98, 70, 130, 0.12);
+    }
+
+    .tarjeta-sueno:hover {
+      background-color: #b99ad8;
+      transform: translateY(-4px);
+      box-shadow: 0 10px 24px rgba(98, 70, 130, 0.20);
+    }
+
+    .tarjeta-sueno .titulo-promedio {
+      color: #5a3b74;
+    }
+
+    .tarjeta-sueno .descripcion-promedio {
+      color: #644c78;
+    }
+
+    /* ----------------------------- */
+    /* TEXTO DE LAS TARJETAS */
+    /* ----------------------------- */
 
     .titulo-promedio {
       font-size: 17px;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 1px;
-
-      color: #664455;
-
       margin-bottom: 12px;
     }
-
 
     .numero-promedio {
       font-size: 45px;
       font-weight: 700;
-
       color: #ffffff;
-
       margin-bottom: 5px;
     }
 
+    /* Equivalencia de horas */
+
+    .equivalencia {
+      font-size: 24px;
+      font-weight: 600;
+      margin-left: 12px;
+      opacity: 0.9;
+    }
 
     .descripcion-promedio {
       font-size: 17px;
-      color: #714f60;
     }
 
+    /* ----------------------------- */
+    /* SEPARADOR */
+    /* ----------------------------- */
+
+    .separador {
+      width: 80px;
+      height: 5px;
+      border-radius: 999px;
+
+      background: linear-gradient(
+        90deg,
+        #d99ab7,
+        #b99ad8
+      );
+
+      margin: 15px auto 45px auto;
+    }
 
     /* ----------------------------- */
     /* FOOTER */
@@ -196,9 +247,8 @@
       text-align: center;
       color: #8d7c87;
       font-size: 14px;
-      margin-top: 50px;
+      margin-top: 55px;
     }
-
 
     /* ----------------------------- */
     /* RESPONSIVE */
@@ -207,7 +257,11 @@
     @media (max-width: 700px) {
 
       .encabezado h1 {
-        font-size: 46px;
+        font-size: 44px;
+      }
+
+      .encabezado p {
+        font-size: 17px;
       }
 
       .visualizacion {
@@ -215,53 +269,65 @@
       }
 
       .numero-promedio {
-        font-size: 37px;
+        font-size: 36px;
+      }
+
+      .equivalencia {
+        display: block;
+        font-size: 20px;
+        margin-left: 0;
+        margin-top: 5px;
       }
 
       .garabato {
-        opacity: 0.15;
+        opacity: 0.13;
       }
 
     }
 
   </style>
-
 </head>
-
 
 <body>
 
-
-  <!-- GARABATOS DECORATIVOS -->
+  <!-- GARABATOS -->
 
   <div class="garabato garabato-1">〰</div>
-
-  <div class="garabato garabato-2">⌁</div>
-
-  <div class="garabato garabato-3">♡</div>
-
+  <div class="garabato garabato-2">♡</div>
+  <div class="garabato garabato-3">⌁</div>
   <div class="garabato garabato-4">✦</div>
-
+  <div class="garabato garabato-5">〰</div>
+  <div class="garabato garabato-6">♡</div>
+  <div class="garabato garabato-7">✧</div>
+  <div class="garabato garabato-8">⌁</div>
+  <div class="garabato garabato-9">♡</div>
+  <div class="garabato garabato-10">✦</div>
 
 
   <div class="contenedor">
-
 
     <!-- ENCABEZADO -->
 
     <div class="encabezado">
 
-      <h1>Mi vida en datos</h1>
+      <h1>Junio en movimiento y descanso</h1>
 
       <p>
-        Un recorrido por mis hábitos de actividad y descanso
+        Un recorrido por mis pasos y mis horas de sueño durante junio:
+        cuánto caminé, cuánto dormí y cómo se distribuyeron mis hábitos a lo largo del mes.
       </p>
 
     </div>
 
 
+    <!-- SECCIÓN ACTIVIDAD -->
 
-    <!-- GRÁFICO DATAWRAPPER -->
+    <div class="seccion-titulo seccion-actividad">
+      <span>👟 ACTIVIDAD</span>
+    </div>
+
+
+    <!-- GRÁFICO PASOS -->
 
     <section class="visualizacion">
 
@@ -294,10 +360,9 @@
     </section>
 
 
+    <!-- PROMEDIO PASOS -->
 
-    <!-- TARJETA PROMEDIO -->
-
-    <div class="tarjeta-promedio">
+    <div class="tarjeta-promedio tarjeta-pasos">
 
       <div class="titulo-promedio">
         👟 PROMEDIO DIARIO DE PASOS EN JUNIO
@@ -314,13 +379,76 @@
     </div>
 
 
+    <!-- SEPARADOR -->
 
-    <!-- PIE DE PÁGINA -->
+    <div class="separador"></div>
+
+
+    <!-- SECCIÓN SUEÑO -->
+
+    <div class="seccion-titulo seccion-sueno">
+      <span>🌙 SUEÑO</span>
+    </div>
+
+
+    <!-- GRÁFICO SUEÑO -->
+
+    <section class="visualizacion">
+
+      <div class="grafico">
+
+        <div
+          style="min-height:426px"
+          id="datawrapper-vis-tVxO1">
+
+          <script
+            type="text/javascript"
+            defer
+            src="https://datawrapper.dwcdn.net/tVxO1/embed.js"
+            charset="utf-8"
+            data-target="#datawrapper-vis-tVxO1">
+          </script>
+
+          <noscript>
+
+            <img
+              src="https://datawrapper.dwcdn.net/tVxO1/full.png"
+              alt="¿Cuántas horas dormí cada noche de Junio? (Gráfico de columnas)" />
+
+          </noscript>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- PROMEDIO SUEÑO -->
+
+    <div class="tarjeta-promedio tarjeta-sueno">
+
+      <div class="titulo-promedio">
+        🌙 PROMEDIO DE HORAS DE SUEÑO EN JUNIO
+      </div>
+
+      <div class="numero-promedio">
+        6,29 horas
+        <span class="equivalencia">= 6 h 17 min 24 s</span>
+      </div>
+
+      <div class="descripcion-promedio">
+        Promedio de horas dormidas por noche durante junio
+      </div>
+
+    </div>
+
+
+    <!-- FOOTER -->
 
     <div class="footer">
       Trabajo Práctico de Visualización de Datos · Agostina Arellano
     </div>
-
 
   </div>
 
