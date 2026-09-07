@@ -46,6 +46,10 @@
     .garabato-8  { top: 1550px; right: 3%; font-size: 70px; transform: rotate(-8deg); }
     .garabato-9  { top: 1770px; left: 6%; font-size: 85px; transform: rotate(22deg); }
     .garabato-10 { top: 1980px; right: 4%; font-size: 75px; transform: rotate(-12deg); }
+    .garabato-11 { top: 2250px; left: 2%; font-size: 65px; transform: rotate(-15deg); }
+    .garabato-12 { top: 2450px; right: 5%; font-size: 85px; transform: rotate(15deg); }
+    .garabato-13 { top: 2700px; left: 5%; font-size: 70px; transform: rotate(10deg); }
+    .garabato-14 { top: 2900px; right: 2%; font-size: 75px; transform: rotate(-20deg); }
 
     /* ----------------------------- */
     /* CONTENEDOR GENERAL */
@@ -55,9 +59,45 @@
       width: 90%;
       max-width: 1100px;
       margin: 0 auto;
-      padding: 50px 0;
+      padding: 35px 0 50px 0;
       position: relative;
       z-index: 1;
+    }
+
+    /* ----------------------------- */
+    /* TARJETA ALUMNA */
+    /* ----------------------------- */
+
+    .tarjeta-alumna {
+      width: fit-content;
+      margin: 0 auto 35px auto;
+
+      background-color: rgba(255, 255, 255, 0.75);
+
+      border: 2px solid #efc6d8;
+      border-radius: 999px;
+
+      padding: 10px 24px;
+
+      color: #76586a;
+      font-size: 15px;
+      font-weight: 600;
+
+      box-shadow: 0 4px 12px rgba(100, 60, 90, 0.08);
+
+      position: relative;
+    }
+
+    .tarjeta-alumna::before {
+      content: "✦";
+      margin-right: 9px;
+      color: #d18eae;
+    }
+
+    .tarjeta-alumna::after {
+      content: "✦";
+      margin-left: 9px;
+      color: #d18eae;
     }
 
     /* ----------------------------- */
@@ -114,6 +154,32 @@
     }
 
     /* ----------------------------- */
+    /* PREGUNTA DEL GRÁFICO */
+    /* ----------------------------- */
+
+    .pregunta {
+      text-align: center;
+      margin: 35px auto 22px auto;
+      max-width: 800px;
+    }
+
+    .pregunta h2 {
+      font-size: 25px;
+      color: #6e4b8c;
+      font-weight: 700;
+      margin: 0;
+      line-height: 1.4;
+    }
+
+    .pregunta .linea {
+      width: 55px;
+      height: 4px;
+      border-radius: 999px;
+      background-color: #b99ad8;
+      margin: 14px auto 0 auto;
+    }
+
+    /* ----------------------------- */
     /* CAJAS DE VISUALIZACIÓN */
     /* ----------------------------- */
 
@@ -129,6 +195,24 @@
       width: 100%;
       overflow: hidden;
       border-radius: 10px;
+    }
+
+    /* ----------------------------- */
+    /* GRÁFICO SVG */
+    /* ----------------------------- */
+
+    .grafico-svg {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .grafico-svg img {
+      width: 100%;
+      max-width: 700px;
+      height: auto;
+      display: block;
     }
 
     /* ----------------------------- */
@@ -208,8 +292,6 @@
       margin-bottom: 5px;
     }
 
-    /* Equivalencia de horas */
-
     .equivalencia {
       font-size: 24px;
       font-weight: 600;
@@ -279,6 +361,10 @@
         margin-top: 5px;
       }
 
+      .pregunta h2 {
+        font-size: 21px;
+      }
+
       .garabato {
         opacity: 0.13;
       }
@@ -302,9 +388,20 @@
   <div class="garabato garabato-8">⌁</div>
   <div class="garabato garabato-9">♡</div>
   <div class="garabato garabato-10">✦</div>
+  <div class="garabato garabato-11">〰</div>
+  <div class="garabato garabato-12">♡</div>
+  <div class="garabato garabato-13">✧</div>
+  <div class="garabato garabato-14">⌁</div>
 
 
   <div class="contenedor">
+
+    <!-- ALUMNA -->
+
+    <div class="tarjeta-alumna">
+      Alumna: María Agostina Arellano
+    </div>
+
 
     <!-- ENCABEZADO -->
 
@@ -320,7 +417,7 @@
     </div>
 
 
-    <!-- SECCIÓN ACTIVIDAD -->
+    <!-- ACTIVIDAD -->
 
     <div class="seccion-titulo seccion-actividad">
       <span>👟 ACTIVIDAD</span>
@@ -379,12 +476,9 @@
     </div>
 
 
-    <!-- SEPARADOR -->
+    <!-- SUEÑO -->
 
     <div class="separador"></div>
-
-
-    <!-- SECCIÓN SUEÑO -->
 
     <div class="seccion-titulo seccion-sueno">
       <span>🌙 SUEÑO</span>
@@ -442,6 +536,34 @@
       </div>
 
     </div>
+
+
+    <!-- COMPOSICIÓN DEL SUEÑO -->
+
+    <div class="pregunta">
+
+      <h2>
+        ¿Cómo se compuso mi sueño a lo largo de cada noche de junio?
+      </h2>
+
+      <div class="linea"></div>
+
+    </div>
+
+
+    <!-- GRÁFICO COMPOSICIÓN DEL SUEÑO -->
+
+    <section class="visualizacion">
+
+      <div class="grafico-svg">
+
+        <img
+          src="composicion_cada_noche.svg"
+          alt="Composición del sueño a lo largo de cada noche de junio" />
+
+      </div>
+
+    </section>
 
 
     <!-- FOOTER -->
