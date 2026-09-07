@@ -1,15 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Junio en movimiento y descanso - Agostina Arellano</title>
-
-
-  <!-- FUENTES -->
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,55 +13,29 @@
     href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Pacifico&display=swap"
     rel="stylesheet">
 
-
-  <!-- FLOURISH -->
-
   <script src="https://public.flourish.studio/resources/embed.js"></script>
-
 
   <style>
 
-
-    /* ============================= */
-    /* CONFIGURACIÓN GENERAL */
-    /* ============================= */
-
     body {
-
       margin: 0;
       padding: 0;
-
       background-color: #fdf0f6;
-
       font-family: 'Quicksand', Arial, Helvetica, sans-serif;
-
       color: #3f3540;
-
       overflow-x: hidden;
-
       position: relative;
-
     }
 
-
-    /* ============================= */
     /* GARABATOS */
-    /* ============================= */
 
     .garabato {
-
       position: absolute;
-
       z-index: 0;
-
       pointer-events: none;
-
       opacity: 0.22;
-
       color: #d99ab7;
-
     }
-
 
     .garabato-1 {
       top: 80px;
@@ -181,874 +150,494 @@
     }
 
 
-    /* ============================= */
     /* CONTENEDOR */
-    /* ============================= */
 
     .contenedor {
-
       width: 90%;
-
       max-width: 1100px;
-
       margin: 0 auto;
-
       padding: 35px 0 50px 0;
-
       position: relative;
-
       z-index: 1;
-
     }
 
 
-    /* ============================= */
-    /* TARJETA ALUMNA */
-    /* ============================= */
+    /* ALUMNA */
 
     .tarjeta-alumna {
-
       width: fit-content;
-
       margin: 0 auto 35px auto;
-
-      background-color: rgba(255, 255, 255, 0.75);
-
+      background-color: rgba(255,255,255,0.75);
       border: 2px solid #efc6d8;
-
       border-radius: 999px;
-
       padding: 10px 24px;
-
       color: #76586a;
-
       font-size: 15px;
-
       font-weight: 600;
-
-      box-shadow: 0 4px 12px rgba(100, 60, 90, 0.08);
-
+      box-shadow: 0 4px 12px rgba(100,60,90,0.08);
       position: relative;
-
     }
-
 
     .tarjeta-alumna::before {
-
       content: "✦";
-
       margin-right: 9px;
-
       color: #d18eae;
-
     }
-
 
     .tarjeta-alumna::after {
-
       content: "✦";
-
       margin-left: 9px;
-
       color: #d18eae;
-
     }
 
 
-    /* ============================= */
     /* ENCABEZADO */
-    /* ============================= */
 
     .encabezado {
-
       text-align: center;
-
       margin-bottom: 55px;
-
     }
-
 
     .encabezado h1 {
-
       font-family: 'Pacifico', cursive;
-
       font-size: 62px;
-
       margin-bottom: 15px;
-
       color: #6d4b61;
-
       font-weight: 400;
-
     }
-
 
     .encabezado p {
-
       font-size: 20px;
-
       color: #806f7a;
-
       margin: 0 auto;
-
       max-width: 750px;
-
       line-height: 1.6;
-
     }
 
 
-    /* ============================= */
     /* TÍTULOS DE SECCIÓN */
-    /* ============================= */
 
     .seccion-titulo {
-
       text-align: center;
-
       margin: 25px 0 25px 0;
-
     }
-
 
     .seccion-titulo span {
-
       display: inline-block;
-
       padding: 10px 22px;
-
       border-radius: 999px;
-
       font-size: 16px;
-
       font-weight: 700;
-
       letter-spacing: 0.5px;
-
     }
-
 
     .seccion-actividad span {
-
       background-color: #f4c9d9;
-
       color: #6d4b61;
-
     }
-
 
     .seccion-sueno span {
-
       background-color: #e0cef4;
-
       color: #6e4b8c;
-
     }
 
 
-    /* ============================= */
     /* PREGUNTAS */
-    /* ============================= */
 
     .pregunta {
-
       text-align: center;
-
       margin: 35px auto 22px auto;
-
       max-width: 800px;
-
     }
-
 
     .pregunta h2 {
-
       font-size: 25px;
-
       color: #6e4b8c;
-
       font-weight: 700;
-
       margin: 0;
-
       line-height: 1.4;
-
     }
-
 
     .pregunta p {
-
       font-size: 17px;
-
       color: #806f7a;
-
       max-width: 700px;
-
       margin: 12px auto 0 auto;
-
       line-height: 1.5;
-
     }
 
-
-    /* ============================= */
-    /* SEPARADOR */
-    /* ============================= */
-
-    .separador {
-
-      width: 80px;
-
-      height: 5px;
-
+    .pregunta .linea {
+      width: 55px;
+      height: 4px;
       border-radius: 999px;
-
-      background: linear-gradient(
-        90deg,
-        #d99ab7,
-        #b99ad8
-      );
-
-      margin: 15px auto 45px auto;
-
+      background-color: #b99ad8;
+      margin: 14px auto 0 auto;
     }
 
 
-    /* ============================= */
     /* VISUALIZACIONES */
-    /* ============================= */
 
     .visualizacion {
-
       background-color: white;
-
       border-radius: 18px;
-
       padding: 30px;
-
       margin-bottom: 25px;
-
-      box-shadow: 0 6px 20px rgba(100, 60, 90, 0.10);
-
+      box-shadow: 0 6px 20px rgba(100,60,90,0.10);
       box-sizing: border-box;
-
     }
-
 
     .grafico {
-
       width: 100%;
-
       overflow: hidden;
-
       border-radius: 10px;
-
     }
 
 
-    /* ============================= */
-    /* TARJETAS DE PROMEDIOS */
-    /* ============================= */
+    /* SEPARADOR */
+
+    .separador {
+      width: 80px;
+      height: 5px;
+      border-radius: 999px;
+      background: linear-gradient(90deg,#d99ab7,#b99ad8);
+      margin: 15px auto 45px auto;
+    }
+
+
+    /* TARJETAS DE PROMEDIO */
 
     .tarjeta-promedio {
-
       border-radius: 18px;
-
       padding: 28px 35px;
-
       margin: 25px auto 55px auto;
-
       cursor: default;
-
       transition:
         background-color 0.25s ease,
         transform 0.25s ease,
         box-shadow 0.25s ease;
-
     }
 
 
     /* PROMEDIO PASOS */
 
     .tarjeta-pasos {
-
       background-color: #e8b6ca;
-
-      box-shadow: 0 6px 18px rgba(109, 75, 97, 0.12);
-
+      box-shadow: 0 6px 18px rgba(109,75,97,0.12);
     }
-
 
     .tarjeta-pasos:hover {
-
       background-color: #d99ab7;
-
       transform: translateY(-4px);
-
-      box-shadow: 0 10px 24px rgba(109, 75, 97, 0.20);
-
+      box-shadow: 0 10px 24px rgba(109,75,97,0.20);
     }
-
 
     .tarjeta-pasos .titulo-promedio {
-
       color: #664455;
-
     }
 
-
     .tarjeta-pasos .descripcion-promedio {
-
       color: #714f60;
-
     }
 
 
     /* PROMEDIO SUEÑO */
 
     .tarjeta-sueno {
-
       background-color: #cdb3e6;
-
-      box-shadow: 0 6px 18px rgba(98, 70, 130, 0.12);
-
+      box-shadow: 0 6px 18px rgba(98,70,130,0.12);
     }
-
 
     .tarjeta-sueno:hover {
-
       background-color: #b99ad8;
-
       transform: translateY(-4px);
-
-      box-shadow: 0 10px 24px rgba(98, 70, 130, 0.20);
-
+      box-shadow: 0 10px 24px rgba(98,70,130,0.20);
     }
-
 
     .tarjeta-sueno .titulo-promedio {
-
       color: #5a3b74;
-
     }
 
-
     .tarjeta-sueno .descripcion-promedio {
-
       color: #644c78;
-
     }
 
 
     .titulo-promedio {
-
       font-size: 17px;
-
       font-weight: 700;
-
       text-transform: uppercase;
-
       letter-spacing: 1px;
-
       margin-bottom: 12px;
-
     }
-
 
     .numero-promedio {
-
       font-size: 45px;
-
       font-weight: 700;
-
       color: #ffffff;
-
       margin-bottom: 5px;
-
     }
-
 
     .equivalencia {
-
       font-size: 24px;
-
       font-weight: 600;
-
       margin-left: 12px;
-
       opacity: 0.9;
-
     }
-
 
     .descripcion-promedio {
-
       font-size: 17px;
-
     }
 
 
-    /* ============================= */
-    /* COMPOSICIÓN DEL SUEÑO */
-    /* ============================= */
+    /* COMPOSICIÓN DEL SUEÑO + NOCHE 21 */
 
     .composicion-fila {
-
       width: 100%;
-
       max-width: 1100px;
-
       margin: 0 auto 55px auto;
-
       display: flex;
-
       align-items: stretch;
-
       gap: 20px;
-
     }
-
-
-    /* RECUADRO BLANCO DEL GRÁFICO */
 
     .visualizacion-composicion {
-
       flex: 1;
-
       min-width: 0;
-
       background-color: white;
-
       border-radius: 18px;
-
       padding: 20px;
-
       margin: 0;
-
-      box-shadow: 0 6px 20px rgba(100, 60, 90, 0.10);
-
+      box-shadow: 0 6px 20px rgba(100,60,90,0.10);
       box-sizing: border-box;
-
       display: flex;
-
       justify-content: center;
-
       align-items: center;
-
     }
-
 
     .grafico-svg {
-
       width: 100%;
-
       display: flex;
-
       justify-content: flex-start;
-
       align-items: center;
-
       overflow: visible;
-
     }
-
 
     .grafico-svg object {
-
       width: 100%;
-
       max-width: 700px;
-
       height: 500px;
-
       display: block;
-
     }
 
 
-    /* ============================= */
     /* TARJETA NOCHE DEL 21 */
-    /* ============================= */
 
     .nota-sueno {
-
       width: 270px;
-
       flex-shrink: 0;
-
       margin: 0;
-
       background-color: #eee3f8;
-
       border: 2px solid #d6c1eb;
-
       border-radius: 18px;
-
       padding: 30px 25px;
-
       box-sizing: border-box;
-
       text-align: center;
-
-      box-shadow: 0 6px 20px rgba(98, 70, 130, 0.10);
-
+      box-shadow: 0 6px 20px rgba(98,70,130,0.10);
       display: flex;
-
       flex-direction: column;
-
       justify-content: center;
-
       align-items: center;
 
       transition:
         background-color 0.25s ease,
         transform 0.25s ease,
         box-shadow 0.25s ease;
-
     }
-
 
     .nota-sueno:hover {
-
       background-color: #d8c2ee;
-
       transform: translateY(-4px);
-
-      box-shadow: 0 10px 24px rgba(98, 70, 130, 0.18);
-
+      box-shadow: 0 10px 24px rgba(98,70,130,0.18);
     }
-
 
     .nota-sueno .emoji {
-
       font-size: 34px;
-
       display: block;
-
       margin-bottom: 10px;
-
     }
-
 
     .nota-sueno h3 {
-
       margin: 0 0 12px 0;
-
       font-size: 18px;
-
       line-height: 1.3;
-
       color: #6e4b8c;
-
       font-weight: 700;
-
     }
-
 
     .nota-sueno p {
-
       margin: 6px 0 0 0;
-
       font-size: 14px;
-
       line-height: 1.55;
-
       color: #725f80;
-
     }
-
 
     .nota-sueno strong {
-
       color: #604477;
-
     }
 
 
-    /* ============================= */
     /* FLOURISH */
-    /* ============================= */
 
     .visualizacion-flourish {
-
       max-width: 950px;
-
       margin: 0 auto 55px auto;
-
       padding: 30px;
-
       box-sizing: border-box;
-
     }
-
 
     .flourish-embed {
-
       width: 100%;
-
     }
 
 
-    /* ============================= */
-    /* TARJETA FINAL */
-    /* ============================= */
+    /* CONCLUSIÓN */
 
     .tarjeta-cierre {
-
       width: 100%;
-
       max-width: 850px;
-
       margin: 10px auto 0 auto;
-
       padding: 30px 40px;
-
       box-sizing: border-box;
 
       background-color: #f4c9d9;
-
       border: 2px solid #e8b0c8;
-
       border-radius: 20px;
 
       text-align: center;
 
-      box-shadow: 0 6px 18px rgba(109, 75, 97, 0.10);
+      box-shadow: 0 6px 18px rgba(109,75,97,0.10);
 
       transition:
         background-color 0.25s ease,
         transform 0.25s ease,
         box-shadow 0.25s ease;
-
     }
-
 
     .tarjeta-cierre:hover {
-
       background-color: #e8b0c8;
-
       transform: translateY(-4px);
-
-      box-shadow: 0 10px 24px rgba(109, 75, 97, 0.18);
-
+      box-shadow: 0 10px 24px rgba(109,75,97,0.18);
     }
-
-
-    .emoji-cierre {
-
-      font-size: 30px;
-
-      margin-bottom: 8px;
-
-    }
-
-
-    .tarjeta-cierre h2 {
-
-      margin: 0 0 10px 0;
-
-      color: #6d4b61;
-
-      font-size: 22px;
-
-      font-weight: 700;
-
-    }
-
 
     .tarjeta-cierre p {
-
       margin: 0 auto;
-
       max-width: 650px;
-
       color: #714f60;
-
       font-size: 16px;
-
       line-height: 1.55;
+    }
 
+    .tarjeta-cierre strong {
+      color: #6d4b61;
+      font-weight: 700;
     }
 
 
-    /* ============================= */
     /* FOOTER */
-    /* ============================= */
 
     .footer {
-
       text-align: center;
-
       color: #8d7c87;
-
       font-size: 14px;
-
       margin-top: 55px;
-
     }
 
 
-    /* ============================= */
     /* MOBILE */
-    /* ============================= */
 
-    @media (max-width: 700px) {
-
+    @media (max-width:700px) {
 
       .encabezado h1 {
-
         font-size: 44px;
-
       }
-
 
       .encabezado p {
-
         font-size: 17px;
-
       }
-
 
       .visualizacion {
-
         padding: 18px;
-
       }
-
 
       .numero-promedio {
-
         font-size: 36px;
-
       }
-
 
       .equivalencia {
-
         display: block;
-
         font-size: 20px;
-
         margin-left: 0;
-
         margin-top: 5px;
-
       }
-
 
       .pregunta h2 {
-
         font-size: 21px;
-
       }
-
 
       .pregunta p {
-
         font-size: 15px;
-
       }
-
-
-      /* COMPOSICIÓN DEL SUEÑO */
 
       .composicion-fila {
-
         flex-direction: column;
-
         gap: 20px;
-
       }
-
 
       .visualizacion-composicion {
-
         padding: 12px;
-
       }
-
 
       .grafico-svg {
-
         justify-content: center;
-
       }
-
 
       .grafico-svg object {
-
         width: 100%;
-
         max-width: 700px;
-
         height: 450px;
-
       }
-
 
       .nota-sueno {
-
         width: 100%;
-
         min-height: 250px;
-
       }
-
-
-      /* FLOURISH */
 
       .visualizacion-flourish {
-
         padding: 18px;
-
       }
-
-
-      /* GARABATOS */
 
       .garabato {
-
         opacity: 0.13;
-
       }
-
-
-      /* TARJETA FINAL */
 
       .tarjeta-cierre {
-
         padding: 25px 22px;
-
       }
-
-
-      .tarjeta-cierre h2 {
-
-        font-size: 20px;
-
-      }
-
 
       .tarjeta-cierre p {
-
         font-size: 15px;
-
       }
 
     }
 
-
   </style>
-
 </head>
 
 
 <body>
 
 
-  <!-- ============================= -->
   <!-- GARABATOS -->
-  <!-- ============================= -->
 
   <div class="garabato garabato-1">〰</div>
   <div class="garabato garabato-2">♡</div>
@@ -1071,20 +660,14 @@
   <div class="contenedor">
 
 
-    <!-- ============================= -->
     <!-- ALUMNA -->
-    <!-- ============================= -->
 
     <div class="tarjeta-alumna">
-
       Alumna: María Agostina Arellano
-
     </div>
 
 
-    <!-- ============================= -->
     <!-- ENCABEZADO -->
-    <!-- ============================= -->
 
     <div class="encabezado">
 
@@ -1100,9 +683,7 @@
     </div>
 
 
-    <!-- ============================= -->
     <!-- ACTIVIDAD -->
-    <!-- ============================= -->
 
     <div class="seccion-titulo seccion-actividad">
 
@@ -1113,9 +694,7 @@
     </div>
 
 
-    <!-- ============================= -->
     <!-- GRÁFICO PASOS -->
-    <!-- ============================= -->
 
     <section class="visualizacion">
 
@@ -1148,39 +727,28 @@
     </section>
 
 
-    <!-- ============================= -->
     <!-- PROMEDIO PASOS -->
-    <!-- ============================= -->
 
     <div class="tarjeta-promedio tarjeta-pasos">
 
       <div class="titulo-promedio">
-
         👟 PROMEDIO DIARIO DE PASOS EN JUNIO
-
       </div>
 
       <div class="numero-promedio">
-
         8.295 pasos
-
       </div>
 
       <div class="descripcion-promedio">
-
         Promedio de pasos caminados por día durante junio
-
       </div>
 
     </div>
 
 
-    <!-- ============================= -->
     <!-- SECCIÓN SUEÑO -->
-    <!-- ============================= -->
 
     <div class="separador"></div>
-
 
     <div class="seccion-titulo seccion-sueno">
 
@@ -1191,9 +759,7 @@
     </div>
 
 
-    <!-- ============================= -->
     <!-- GRÁFICO HORAS DE SUEÑO -->
-    <!-- ============================= -->
 
     <section class="visualizacion">
 
@@ -1226,16 +792,12 @@
     </section>
 
 
-    <!-- ============================= -->
     <!-- PROMEDIO SUEÑO -->
-    <!-- ============================= -->
 
     <div class="tarjeta-promedio tarjeta-sueno">
 
       <div class="titulo-promedio">
-
         🌙 PROMEDIO DE HORAS DE SUEÑO EN JUNIO
-
       </div>
 
       <div class="numero-promedio">
@@ -1249,17 +811,13 @@
       </div>
 
       <div class="descripcion-promedio">
-
         Promedio de horas dormidas por noche durante junio
-
       </div>
 
     </div>
 
 
-    <!-- ============================= -->
     <!-- PREGUNTA COMPOSICIÓN DEL SUEÑO -->
-    <!-- ============================= -->
 
     <div class="pregunta">
 
@@ -1272,9 +830,7 @@
     </div>
 
 
-    <!-- ============================= -->
     <!-- GRÁFICO + NOCHE DEL 21 -->
-    <!-- ============================= -->
 
     <div class="composicion-fila">
 
@@ -1315,19 +871,15 @@
 
         <p>
           Esto podría deberse a que el reloj no registró correctamente
-          la información del sueño o que no se utilizó adecuadamente
-          el dispositivo.
+          la información del sueño o que no se utilizó adecuadamente el dispositivo.
         </p>
 
       </div>
 
-
     </div>
 
 
-    <!-- ============================= -->
     <!-- COMPARACIÓN POR DÍA DE SEMANA -->
-    <!-- ============================= -->
 
     <div class="separador"></div>
 
@@ -1339,16 +891,14 @@
       </h2>
 
       <p>
-        Para descubrirlo, comparé el promedio de pasos y de horas de sueño
+        Para descubrirlo, comparo el promedio de pasos y de horas de sueño
         de cada día de la semana a lo largo de junio.
       </p>
 
     </div>
 
 
-    <!-- ============================= -->
     <!-- GRÁFICO FLOURISH -->
-    <!-- ============================= -->
 
     <section class="visualizacion visualizacion-flourish">
 
@@ -1360,36 +910,32 @@
     </section>
 
 
-    <!-- ============================= -->
-    <!-- TARJETA FINAL -->
-    <!-- ============================= -->
+    <!-- CONCLUSIÓN DEL ÚLTIMO GRÁFICO -->
 
     <div class="tarjeta-cierre">
 
-      <div class="emoji-cierre">
-        ✨
-      </div>
+      <p>
 
-  <p>
-    Según los promedios de junio, el
-    <strong>miércoles</strong>
-    fue el día en el que más dormí, con
-    <strong>7,28 horas</strong>
-    en promedio.
-    <br><br>
-    En cambio, el
-    <strong>viernes</strong>
-    fue el día en el que más caminé, con
-    <strong>10.178 pasos</strong>
-    en promedio.
-  </p>
+        Según los promedios de junio, el
+        <strong>miércoles</strong>
+        fue el día en el que más dormí, con
+        <strong>7,28 horas</strong>
+        en promedio.
+
+        <br><br>
+
+        En cambio, el
+        <strong>viernes</strong>
+        fue el día en el que más caminé, con
+        <strong>10.178 pasos</strong>
+        en promedio.
+
+      </p>
 
     </div>
 
 
-    <!-- ============================= -->
     <!-- FOOTER -->
-    <!-- ============================= -->
 
     <div class="footer">
 
@@ -1399,7 +945,6 @@
 
 
   </div>
-
 
 </body>
 
