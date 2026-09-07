@@ -12,6 +12,9 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
 
+  <!-- Flourish -->
+  <script src="https://public.flourish.studio/resources/embed.js"></script>
+
   <style>
 
     body {
@@ -50,6 +53,8 @@
     .garabato-12 { top: 2450px; right: 5%; font-size: 85px; transform: rotate(15deg); }
     .garabato-13 { top: 2700px; left: 5%; font-size: 70px; transform: rotate(10deg); }
     .garabato-14 { top: 2900px; right: 2%; font-size: 75px; transform: rotate(-20deg); }
+    .garabato-15 { top: 3150px; left: 3%; font-size: 80px; transform: rotate(12deg); }
+    .garabato-16 { top: 3400px; right: 4%; font-size: 70px; transform: rotate(-15deg); }
 
     /* ----------------------------- */
     /* CONTENEDOR GENERAL */
@@ -148,7 +153,7 @@
     }
 
     /* ----------------------------- */
-    /* PREGUNTA DEL GRÁFICO */
+    /* PREGUNTA DE LOS GRÁFICOS */
     /* ----------------------------- */
 
     .pregunta {
@@ -163,6 +168,14 @@
       font-weight: 700;
       margin: 0;
       line-height: 1.4;
+    }
+
+    .pregunta p {
+      font-size: 17px;
+      color: #806f7a;
+      max-width: 700px;
+      margin: 12px auto 0 auto;
+      line-height: 1.5;
     }
 
     .pregunta .linea {
@@ -183,6 +196,7 @@
       padding: 30px;
       margin-bottom: 25px;
       box-shadow: 0 6px 20px rgba(100, 60, 90, 0.10);
+      box-sizing: border-box;
     }
 
     .grafico {
@@ -192,35 +206,29 @@
     }
 
     /* ----------------------------- */
-    /* TERCER GRÁFICO + ACLARACIÓN */
+    /* GRÁFICO SVG */
     /* ----------------------------- */
 
     .visualizacion-composicion {
-      max-width: 900px;
-      margin: 0 auto 55px auto;
-      padding: 25px;
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto 20px auto;
+      padding: 30px;
       box-sizing: border-box;
-    }
-
-    .composicion-contenido {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 25px;
     }
 
     .grafico-svg {
       width: 100%;
-      max-width: 650px;
       display: flex;
       justify-content: center;
       align-items: center;
+      overflow: visible;
     }
 
     .grafico-svg object {
       width: 100%;
-      height: 426px;
-      max-width: 650px;
+      max-width: 900px;
+      height: 600px;
       display: block;
     }
 
@@ -229,14 +237,15 @@
     /* ----------------------------- */
 
     .nota-sueno {
-      width: 190px;
-      flex-shrink: 0;
+      width: 100%;
+      max-width: 700px;
+      margin: 0 auto 55px auto;
 
       background-color: #eee3f8;
       border: 2px solid #d6c1eb;
       border-radius: 16px;
 
-      padding: 20px 18px;
+      padding: 18px 25px;
       box-sizing: border-box;
 
       text-align: center;
@@ -256,19 +265,21 @@
     }
 
     .nota-sueno .emoji {
-      font-size: 30px;
-      margin-bottom: 8px;
+      font-size: 27px;
+      display: inline-block;
+      margin-right: 8px;
     }
 
     .nota-sueno h3 {
-      margin: 0 0 10px 0;
+      display: inline-block;
+      margin: 0 0 5px 0;
       font-size: 16px;
       color: #6e4b8c;
       font-weight: 700;
     }
 
     .nota-sueno p {
-      margin: 0;
+      margin: 4px 0 0 0;
       font-size: 14px;
       line-height: 1.5;
       color: #725f80;
@@ -276,6 +287,21 @@
 
     .nota-sueno strong {
       color: #604477;
+    }
+
+    /* ----------------------------- */
+    /* FLOURISH */
+    /* ----------------------------- */
+
+    .visualizacion-flourish {
+      max-width: 950px;
+      margin: 0 auto 55px auto;
+      padding: 30px;
+      box-sizing: border-box;
+    }
+
+    .flourish-embed {
+      width: 100%;
     }
 
     /* ----------------------------- */
@@ -399,26 +425,6 @@
     /* RESPONSIVE */
     /* ----------------------------- */
 
-    @media (max-width: 850px) {
-
-      .composicion-contenido {
-        flex-direction: column;
-      }
-
-      .grafico-svg {
-        max-width: 700px;
-      }
-
-      .grafico-svg object {
-        height: 426px;
-      }
-
-      .nota-sueno {
-        width: 100%;
-        max-width: 400px;
-      }
-    }
-
     @media (max-width: 700px) {
 
       .encabezado h1 {
@@ -430,10 +436,6 @@
       }
 
       .visualizacion {
-        padding: 18px;
-      }
-
-      .visualizacion-composicion {
         padding: 18px;
       }
 
@@ -452,8 +454,20 @@
         font-size: 21px;
       }
 
+      .pregunta p {
+        font-size: 15px;
+      }
+
+      .visualizacion-composicion {
+        padding: 18px;
+      }
+
       .grafico-svg object {
-        height: 350px;
+        height: 450px;
+      }
+
+      .visualizacion-flourish {
+        padding: 18px;
       }
 
       .garabato {
@@ -483,6 +497,8 @@
   <div class="garabato garabato-12">♡</div>
   <div class="garabato garabato-13">✧</div>
   <div class="garabato garabato-14">⌁</div>
+  <div class="garabato garabato-15">〰</div>
+  <div class="garabato garabato-16">♡</div>
 
 
   <div class="contenedor">
@@ -567,7 +583,7 @@
     </div>
 
 
-    <!-- SUEÑO -->
+    <!-- SECCIÓN SUEÑO -->
 
     <div class="separador"></div>
 
@@ -646,45 +662,69 @@
 
     <section class="visualizacion visualizacion-composicion">
 
-      <div class="composicion-contenido">
+      <div class="grafico-svg">
 
-        <!-- SVG INTERACTIVO -->
+        <object
+          type="image/svg+xml"
+          data="composicion_cada_noche.svg">
+        </object>
 
-        <div class="grafico-svg">
+      </div>
 
-          <object
-            type="image/svg+xml"
-            data="composicion_cada_noche.svg">
-          </object>
-
-        </div>
+    </section>
 
 
-        <!-- ACLARACIÓN NOCHE 21 -->
+    <!-- ACLARACIÓN NOCHE 21 -->
 
-        <div class="nota-sueno">
+    <div class="nota-sueno">
 
-          <div class="emoji">
-            🌙
-          </div>
+      <span class="emoji">🌙</span>
 
-          <h3>
-            Noche del 21
-          </h3>
+      <h3>
+        Noche del 21
+      </h3>
 
-          <p>
-            Esta noche aparece como
-            <strong>“sin identificar”</strong>
-            en los datos de sueño.
-          </p>
+      <p>
+        Esta noche aparece como
+        <strong>“sin identificar”</strong>
+        en los datos de sueño.
+      </p>
 
-          <p style="margin-top: 10px;">
-            Esto podría deberse a que el reloj no registró correctamente
-            la información del sueño.
-          </p>
+      <p>
+        Esto podría deberse a que el reloj no registró correctamente
+        la información del sueño.
+      </p>
 
-        </div>
+    </div>
 
+
+    <!-- ----------------------------- -->
+    <!-- COMPARACIÓN POR DÍA DE SEMANA -->
+    <!-- ----------------------------- -->
+
+    <div class="pregunta">
+
+      <h2>
+        ¿Hay días de la semana en los que camino más y duermo más?
+      </h2>
+
+      <p>
+        Para descubrirlo, comparo el promedio de pasos y de horas de sueño
+        de cada día de la semana a lo largo de junio.
+      </p>
+
+      <div class="linea"></div>
+
+    </div>
+
+
+    <!-- GRÁFICO FLOURISH -->
+
+    <section class="visualizacion visualizacion-flourish">
+
+      <div
+        class="flourish-embed flourish-chart"
+        data-src="visualisation/30174320">
       </div>
 
     </section>
