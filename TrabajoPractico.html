@@ -71,20 +71,14 @@
     .tarjeta-alumna {
       width: fit-content;
       margin: 0 auto 35px auto;
-
       background-color: rgba(255, 255, 255, 0.75);
-
       border: 2px solid #efc6d8;
       border-radius: 999px;
-
       padding: 10px 24px;
-
       color: #76586a;
       font-size: 15px;
       font-weight: 600;
-
       box-shadow: 0 4px 12px rgba(100, 60, 90, 0.08);
-
       position: relative;
     }
 
@@ -198,21 +192,90 @@
     }
 
     /* ----------------------------- */
-    /* GRÁFICO SVG */
+    /* TERCER GRÁFICO + ACLARACIÓN */
     /* ----------------------------- */
+
+    .visualizacion-composicion {
+      max-width: 900px;
+      margin: 0 auto 55px auto;
+      padding: 25px;
+      box-sizing: border-box;
+    }
+
+    .composicion-contenido {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 25px;
+    }
 
     .grafico-svg {
       width: 100%;
+      max-width: 650px;
       display: flex;
       justify-content: center;
       align-items: center;
     }
 
-    .grafico-svg img {
+    .grafico-svg object {
       width: 100%;
-      max-width: 700px;
-      height: auto;
+      height: 426px;
+      max-width: 650px;
       display: block;
+    }
+
+    /* ----------------------------- */
+    /* TARJETA NOCHE 21 */
+    /* ----------------------------- */
+
+    .nota-sueno {
+      width: 190px;
+      flex-shrink: 0;
+
+      background-color: #eee3f8;
+      border: 2px solid #d6c1eb;
+      border-radius: 16px;
+
+      padding: 20px 18px;
+      box-sizing: border-box;
+
+      text-align: center;
+
+      box-shadow: 0 5px 15px rgba(98, 70, 130, 0.10);
+
+      transition:
+        background-color 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+    }
+
+    .nota-sueno:hover {
+      background-color: #d8c2ee;
+      transform: translateY(-4px);
+      box-shadow: 0 9px 20px rgba(98, 70, 130, 0.18);
+    }
+
+    .nota-sueno .emoji {
+      font-size: 30px;
+      margin-bottom: 8px;
+    }
+
+    .nota-sueno h3 {
+      margin: 0 0 10px 0;
+      font-size: 16px;
+      color: #6e4b8c;
+      font-weight: 700;
+    }
+
+    .nota-sueno p {
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.5;
+      color: #725f80;
+    }
+
+    .nota-sueno strong {
+      color: #604477;
     }
 
     /* ----------------------------- */
@@ -336,6 +399,26 @@
     /* RESPONSIVE */
     /* ----------------------------- */
 
+    @media (max-width: 850px) {
+
+      .composicion-contenido {
+        flex-direction: column;
+      }
+
+      .grafico-svg {
+        max-width: 700px;
+      }
+
+      .grafico-svg object {
+        height: 426px;
+      }
+
+      .nota-sueno {
+        width: 100%;
+        max-width: 400px;
+      }
+    }
+
     @media (max-width: 700px) {
 
       .encabezado h1 {
@@ -347,6 +430,10 @@
       }
 
       .visualizacion {
+        padding: 18px;
+      }
+
+      .visualizacion-composicion {
         padding: 18px;
       }
 
@@ -363,6 +450,10 @@
 
       .pregunta h2 {
         font-size: 21px;
+      }
+
+      .grafico-svg object {
+        height: 350px;
       }
 
       .garabato {
@@ -485,7 +576,7 @@
     </div>
 
 
-    <!-- GRÁFICO SUEÑO -->
+    <!-- GRÁFICO HORAS DE SUEÑO -->
 
     <section class="visualizacion">
 
@@ -538,7 +629,7 @@
     </div>
 
 
-    <!-- COMPOSICIÓN DEL SUEÑO -->
+    <!-- PREGUNTA COMPOSICIÓN DEL SUEÑO -->
 
     <div class="pregunta">
 
@@ -553,13 +644,46 @@
 
     <!-- GRÁFICO COMPOSICIÓN DEL SUEÑO -->
 
-    <section class="visualizacion">
+    <section class="visualizacion visualizacion-composicion">
 
-      <div class="grafico-svg">
+      <div class="composicion-contenido">
 
-        <img
-          src="composicion_cada_noche.svg"
-          alt="Composición del sueño a lo largo de cada noche de junio" />
+        <!-- SVG INTERACTIVO -->
+
+        <div class="grafico-svg">
+
+          <object
+            type="image/svg+xml"
+            data="composicion_cada_noche.svg">
+          </object>
+
+        </div>
+
+
+        <!-- ACLARACIÓN NOCHE 21 -->
+
+        <div class="nota-sueno">
+
+          <div class="emoji">
+            🌙
+          </div>
+
+          <h3>
+            Noche del 21
+          </h3>
+
+          <p>
+            Esta noche aparece como
+            <strong>“sin identificar”</strong>
+            en los datos de sueño.
+          </p>
+
+          <p style="margin-top: 10px;">
+            Esto podría deberse a que el reloj no registró correctamente
+            la información del sueño.
+          </p>
+
+        </div>
 
       </div>
 
