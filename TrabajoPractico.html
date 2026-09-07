@@ -304,12 +304,12 @@
     }
 
 
-    /* TARJETAS DE PROMEDIO */
+    /* TARJETA PROMEDIO */
 
     .tarjeta-promedio {
       border-radius: 18px;
       padding: 28px 35px;
-      margin: 25px auto 55px auto;
+      margin: 25px auto 25px auto;
       cursor: default;
       transition:
         background-color 0.25s ease,
@@ -361,7 +361,6 @@
       color: #644c78;
     }
 
-
     .titulo-promedio {
       font-size: 17px;
       font-weight: 700;
@@ -386,6 +385,83 @@
 
     .descripcion-promedio {
       font-size: 17px;
+    }
+
+
+    /* FILA DE TARJETAS */
+
+    .fila-tarjetas {
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      gap: 22px;
+      max-width: 850px;
+      margin: 0 auto 55px auto;
+    }
+
+    .tarjeta-dato {
+      width: 50%;
+      min-height: 170px;
+      padding: 25px;
+      border-radius: 18px;
+      box-sizing: border-box;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background-color 0.25s ease;
+    }
+
+    .tarjeta-dato:hover {
+      transform: translateY(-4px);
+    }
+
+    .tarjeta-dato .emoji-dato {
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+
+    .tarjeta-dato h3 {
+      margin: 0 0 10px 0;
+      font-size: 18px;
+      line-height: 1.35;
+    }
+
+    .tarjeta-dato .dato-principal {
+      margin: 0;
+      font-size: 22px;
+      font-weight: 700;
+    }
+
+
+    /* TARJETAS PASOS */
+
+    .dato-pasos {
+      background-color: #f4c9d9;
+      color: #6d4b61;
+      box-shadow: 0 6px 18px rgba(109,75,97,0.10);
+    }
+
+    .dato-pasos:hover {
+      background-color: #e8b0c8;
+      box-shadow: 0 10px 24px rgba(109,75,97,0.18);
+    }
+
+
+    /* TARJETAS SUEÑO */
+
+    .dato-sueno {
+      background-color: #e8ddf4;
+      color: #644c78;
+      box-shadow: 0 6px 18px rgba(98,70,130,0.10);
+    }
+
+    .dato-sueno:hover {
+      background-color: #d8c2ee;
+      box-shadow: 0 10px 24px rgba(98,70,130,0.18);
     }
 
 
@@ -447,7 +523,6 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-
       transition:
         background-color 0.25s ease,
         transform 0.25s ease,
@@ -490,7 +565,7 @@
 
     .visualizacion-flourish {
       max-width: 950px;
-      margin: 0 auto 55px auto;
+      margin: 0 auto 30px auto;
       padding: 30px;
       box-sizing: border-box;
     }
@@ -508,15 +583,11 @@
       margin: 10px auto 0 auto;
       padding: 30px 40px;
       box-sizing: border-box;
-
       background-color: #f4c9d9;
       border: 2px solid #e8b0c8;
       border-radius: 20px;
-
       text-align: center;
-
       box-shadow: 0 6px 18px rgba(109,75,97,0.10);
-
       transition:
         background-color 0.25s ease,
         transform 0.25s ease,
@@ -588,6 +659,15 @@
         font-size: 15px;
       }
 
+      .fila-tarjetas {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .tarjeta-dato {
+        width: 100%;
+      }
+
       .composicion-fila {
         flex-direction: column;
         gap: 20px;
@@ -633,9 +713,7 @@
   </style>
 </head>
 
-
 <body>
-
 
   <!-- GARABATOS -->
 
@@ -656,9 +734,7 @@
   <div class="garabato garabato-15">〰</div>
   <div class="garabato garabato-16">♡</div>
 
-
   <div class="contenedor">
-
 
     <!-- ALUMNA -->
 
@@ -671,9 +747,7 @@
 
     <div class="encabezado">
 
-      <h1>
-        Junio en movimiento y descanso
-      </h1>
+      <h1>Junio en movimiento y descanso</h1>
 
       <p>
         Un recorrido por mis pasos y mis horas de sueño durante junio:
@@ -686,11 +760,7 @@
     <!-- ACTIVIDAD -->
 
     <div class="seccion-titulo seccion-actividad">
-
-      <span>
-        👟 ACTIVIDAD
-      </span>
-
+      <span>👟 ACTIVIDAD</span>
     </div>
 
 
@@ -713,11 +783,9 @@
           </script>
 
           <noscript>
-
             <img
               src="https://datawrapper.dwcdn.net/05SW9/full.png"
-              alt="¿Cuántos pasos caminé cada día de Junio? (Gráfico de columnas)" />
-
+              alt="¿Cuántos pasos caminé cada día de Junio?">
           </noscript>
 
         </div>
@@ -746,16 +814,47 @@
     </div>
 
 
+    <!-- MÁXIMO Y MÍNIMO DE PASOS -->
+
+    <div class="fila-tarjetas">
+
+      <div class="tarjeta-dato dato-pasos">
+
+        <div class="emoji-dato">🚶‍♀️</div>
+
+        <h3>
+          Día que más caminé
+        </h3>
+
+        <p class="dato-principal">
+          19/06 · 16.279 pasos
+        </p>
+
+      </div>
+
+      <div class="tarjeta-dato dato-pasos">
+
+        <div class="emoji-dato">🧘‍♀️</div>
+
+        <h3>
+          Día que menos caminé
+        </h3>
+
+        <p class="dato-principal">
+          23/06 · 3.271 pasos
+        </p>
+
+      </div>
+
+    </div>
+
+
     <!-- SECCIÓN SUEÑO -->
 
     <div class="separador"></div>
 
     <div class="seccion-titulo seccion-sueno">
-
-      <span>
-        🌙 SUEÑO
-      </span>
-
+      <span>🌙 SUEÑO</span>
     </div>
 
 
@@ -778,11 +877,9 @@
           </script>
 
           <noscript>
-
             <img
               src="https://datawrapper.dwcdn.net/tVxO1/full.png"
-              alt="¿Cuántas horas dormí cada noche de Junio? (Gráfico de columnas)" />
-
+              alt="¿Cuántas horas dormí cada noche de Junio?">
           </noscript>
 
         </div>
@@ -817,6 +914,76 @@
     </div>
 
 
+    <!-- TARJETAS HORARIOS: MÁS TEMPRANO -->
+
+    <div class="fila-tarjetas">
+
+      <div class="tarjeta-dato dato-sueno">
+
+        <div class="emoji-dato">🌙</div>
+
+        <h3>
+          Te acostaste más temprano
+        </h3>
+
+        <p class="dato-principal">
+          25/06 · 23:49
+        </p>
+
+      </div>
+
+      <div class="tarjeta-dato dato-sueno">
+
+        <div class="emoji-dato">🌅</div>
+
+        <h3>
+          Te despertaste más temprano
+        </h3>
+
+        <p class="dato-principal">
+          16/06 · 07:55
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <!-- TARJETAS HORARIOS: MÁS TARDE -->
+
+    <div class="fila-tarjetas">
+
+      <div class="tarjeta-dato dato-sueno">
+
+        <div class="emoji-dato">🌙</div>
+
+        <h3>
+          Te acostaste más tarde
+        </h3>
+
+        <p class="dato-principal">
+          20/06 · 05:27
+        </p>
+
+      </div>
+
+      <div class="tarjeta-dato dato-sueno">
+
+        <div class="emoji-dato">☀️</div>
+
+        <h3>
+          Te despertaste más tarde
+        </h3>
+
+        <p class="dato-principal">
+          28/06 · 13:37
+        </p>
+
+      </div>
+
+    </div>
+
+
     <!-- PREGUNTA COMPOSICIÓN DEL SUEÑO -->
 
     <div class="pregunta">
@@ -833,9 +1000,6 @@
     <!-- GRÁFICO + NOCHE DEL 21 -->
 
     <div class="composicion-fila">
-
-
-      <!-- GRÁFICO COMPOSICIÓN -->
 
       <section class="visualizacion visualizacion-composicion">
 
@@ -855,9 +1019,7 @@
 
       <div class="nota-sueno">
 
-        <span class="emoji">
-          🌙
-        </span>
+        <span class="emoji">🌙</span>
 
         <h3>
           Noche del 21 de junio
@@ -883,15 +1045,14 @@
 
     <div class="separador"></div>
 
-
     <div class="pregunta">
 
       <h2>
-        ¿Hay días de la semana en los que camino más y duermo más?
+        ¿Qué día, en promedio, caminé y dormí más durante el mes de junio?
       </h2>
 
       <p>
-        Para descubrirlo, comparo el promedio de pasos y de horas de sueño
+        Para descubrirlo, comparo los promedios de pasos y de horas de sueño
         de cada día de la semana a lo largo de junio.
       </p>
 
@@ -916,17 +1077,17 @@
 
       <p>
 
-        Según los promedios de junio, el
+        Según los promedios de junio, los
         <strong>miércoles</strong>
-        fue el día en el que más dormí, con
+        fueron los días en los que más dormí, con
         <strong>7,28 horas</strong>
         en promedio.
 
         <br><br>
 
-        En cambio, el
+        En cambio, los
         <strong>viernes</strong>
-        fue el día en el que más caminé, con
+        fueron los días en los que más caminé, con
         <strong>10.178 pasos</strong>
         en promedio.
 
@@ -938,14 +1099,10 @@
     <!-- FOOTER -->
 
     <div class="footer">
-
       Trabajo Práctico de Visualización de Datos · Agostina Arellano
-
     </div>
-
 
   </div>
 
 </body>
-
 </html>
