@@ -84,7 +84,7 @@
     }
 
     /* =========================
-       CONTENEDOR PRINCIPAL
+       CONTENEDOR
        ========================= */
 
     .contenedor {
@@ -131,7 +131,7 @@
     }
 
     /* =========================
-       PILLS / SECCIONES
+       PILLS
        ========================= */
 
     .pill {
@@ -164,9 +164,10 @@
       padding: 30px 25px;
       border-radius: 18px;
       text-align: center;
-      transition: transform 0.25s ease,
-                  box-shadow 0.25s ease,
-                  background-color 0.25s ease;
+      transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background-color 0.25s ease;
     }
 
     .tarjeta-promedio:hover {
@@ -237,13 +238,15 @@
       min-height: 170px;
       padding: 25px;
       border-radius: 18px;
+      box-sizing: border-box;
       text-align: center;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      transition: transform 0.25s ease,
-                  box-shadow 0.25s ease,
-                  background-color 0.25s ease;
+      transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background-color 0.25s ease;
     }
 
     .tarjeta-dato:hover {
@@ -263,9 +266,8 @@
 
     .tarjeta-dato .dato-principal {
       margin: 0;
-      font-size: 19px;
+      font-size: 22px;
       font-weight: 700;
-      line-height: 1.45;
     }
 
     .dato-pasos {
@@ -303,7 +305,7 @@
     }
 
     /* =========================
-       PREGUNTAS / TEXTOS
+       PREGUNTAS
        ========================= */
 
     .pregunta {
@@ -339,24 +341,6 @@
       border-radius: 18px;
       padding: 20px;
       box-shadow: 0 6px 20px rgba(100, 60, 90, 0.10);
-    }
-
-    /* =========================
-       DATAWRAPPER
-       ========================= */
-
-    .visualizacion-datawrapper {
-      overflow: hidden;
-    }
-
-    /* =========================
-       FLOURISH
-       ========================= */
-
-    .visualizacion-flourish {
-      max-width: 900px;
-      padding: 20px;
-      overflow: hidden;
     }
 
     /* =========================
@@ -420,9 +404,10 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      transition: background-color 0.25s ease,
-                  transform 0.25s ease,
-                  box-shadow 0.25s ease;
+      transition:
+        background-color 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
     }
 
     .nota-sueno:hover {
@@ -537,25 +522,10 @@
       .fila-tarjetas {
         flex-direction: column;
         align-items: center;
-        gap: 18px;
       }
 
       .tarjeta-dato {
         width: 100%;
-      }
-
-      .separador {
-        width: 85%;
-        margin-top: 10px;
-        margin-bottom: 35px;
-      }
-
-      .pregunta h2 {
-        font-size: 21px;
-      }
-
-      .pregunta p {
-        font-size: 14px;
       }
 
       .composicion-fila {
@@ -582,14 +552,6 @@
         min-height: 250px;
       }
 
-      .tarjeta-cierre {
-        padding: 25px 20px;
-      }
-
-      .tarjeta-cierre p {
-        font-size: 15px;
-      }
-
       .visualizacion-tableau {
         padding: 10px;
       }
@@ -609,9 +571,7 @@
 
 <body>
 
-  <!-- =========================
-       DECORACIONES
-       ========================= -->
+  <!-- DECORACIONES -->
 
   <div class="decoracion decoracion-1">〰</div>
   <div class="decoracion decoracion-2">♡</div>
@@ -653,44 +613,30 @@
       👟 ACTIVIDAD
     </div>
 
+
     <div class="tarjeta-promedio promedio-pasos">
+
       <span class="emoji">🚶‍♀️</span>
+
       <h2>Promedio diario de pasos</h2>
-      <p class="numero">8.295 pasos</p>
+
+      <p class="numero">
+        8.295 pasos
+      </p>
+
       <p>
         Este es el promedio de pasos que hice por día durante junio.
       </p>
-    </div>
-
-
-    <!-- DÍAS DE MÁS Y MENOS PASOS -->
-
-    <div class="fila-tarjetas">
-
-      <div class="tarjeta-dato dato-pasos">
-        <span class="emoji-dato">🚶‍♀️</span>
-        <h3>Día que más caminé</h3>
-        <p class="dato-principal">
-          19/06 · viernes · 16.279 pasos
-        </p>
-      </div>
-
-      <div class="tarjeta-dato dato-pasos">
-        <span class="emoji-dato">🧘‍♀️</span>
-        <h3>Día que menos caminé</h3>
-        <p class="dato-principal">
-          23/06 · martes · 3.271 pasos
-        </p>
-      </div>
 
     </div>
 
 
     <!-- GRÁFICO DE PASOS -->
 
-    <section class="visualizacion visualizacion-datawrapper">
+    <section class="visualizacion">
 
       <div style="min-height:427px" id="datawrapper-vis-05SW9">
+
         <script
           type="text/javascript"
           defer
@@ -705,9 +651,46 @@
             alt="¿Cuántos pasos caminé cada día de Junio? (Gráfico de columnas)"
           />
         </noscript>
+
       </div>
 
     </section>
+
+
+    <!-- TARJETAS DE PASOS -->
+
+    <div class="fila-tarjetas">
+
+      <div class="tarjeta-dato dato-pasos">
+
+        <span class="emoji-dato">🚶‍♀️</span>
+
+        <h3>
+          Día que más caminé
+        </h3>
+
+        <p class="dato-principal">
+          19/06 · viernes · 16.279 pasos
+        </p>
+
+      </div>
+
+
+      <div class="tarjeta-dato dato-pasos">
+
+        <span class="emoji-dato">🧘‍♀️</span>
+
+        <h3>
+          Día que menos caminé
+        </h3>
+
+        <p class="dato-principal">
+          23/06 · martes · 3.271 pasos
+        </p>
+
+      </div>
+
+    </div>
 
 
     <!-- =========================
@@ -718,67 +701,29 @@
       🌙 SUEÑO
     </div>
 
+
     <div class="tarjeta-promedio promedio-sueno">
+
       <span class="emoji">🌙</span>
-      <h2>Promedio diario de sueño</h2>
+
+      <h2>
+        Promedio diario de sueño
+      </h2>
+
       <p class="numero">
         6,29 horas = 6 h 17 min 24 s
       </p>
+
       <p>
         Este es el promedio de horas que dormí por noche durante junio.
       </p>
-    </div>
-
-
-    <!-- PRIMERA FILA DE DATOS DE SUEÑO -->
-
-    <div class="fila-tarjetas">
-
-      <div class="tarjeta-dato dato-sueno">
-        <span class="emoji-dato">🌙</span>
-        <h3>Me acosté más temprano</h3>
-        <p class="dato-principal">
-          25/06 · jueves · 23:49
-        </p>
-      </div>
-
-      <div class="tarjeta-dato dato-sueno">
-        <span class="emoji-dato">🌅</span>
-        <h3>Me desperté más temprano</h3>
-        <p class="dato-principal">
-          16/06 · martes · 07:55
-        </p>
-      </div>
 
     </div>
 
 
-    <!-- SEGUNDA FILA DE DATOS DE SUEÑO -->
+    <!-- GRÁFICO DE HORAS DE SUEÑO -->
 
-    <div class="fila-tarjetas">
-
-      <div class="tarjeta-dato dato-sueno">
-        <span class="emoji-dato">🌙</span>
-        <h3>Me acosté más tarde</h3>
-        <p class="dato-principal">
-          20/06 · sábado · 05:27
-        </p>
-      </div>
-
-      <div class="tarjeta-dato dato-sueno">
-        <span class="emoji-dato">☀️</span>
-        <h3>Me desperté más tarde</h3>
-        <p class="dato-principal">
-          28/06 · domingo · 13:37
-        </p>
-      </div>
-
-    </div>
-
-
-    <!-- GRÁFICO HORAS DE SUEÑO -->
-
-    <section class="visualizacion visualizacion-datawrapper">
+    <section class="visualizacion">
 
       <div
         style="min-height:426px; max-width:700px; margin:0 auto;"
@@ -804,6 +749,76 @@
     </section>
 
 
+    <!-- TARJETAS DE SUEÑO -->
+
+    <div class="fila-tarjetas">
+
+      <div class="tarjeta-dato dato-sueno">
+
+        <span class="emoji-dato">🌙</span>
+
+        <h3>
+          Me acosté más temprano
+        </h3>
+
+        <p class="dato-principal">
+          25/06 · jueves · 23:49
+        </p>
+
+      </div>
+
+
+      <div class="tarjeta-dato dato-sueno">
+
+        <span class="emoji-dato">🌅</span>
+
+        <h3>
+          Me desperté más temprano
+        </h3>
+
+        <p class="dato-principal">
+          16/06 · martes · 07:55
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <div class="fila-tarjetas">
+
+      <div class="tarjeta-dato dato-sueno">
+
+        <span class="emoji-dato">🌙</span>
+
+        <h3>
+          Me acosté más tarde
+        </h3>
+
+        <p class="dato-principal">
+          20/06 · sábado · 05:27
+        </p>
+
+      </div>
+
+
+      <div class="tarjeta-dato dato-sueno">
+
+        <span class="emoji-dato">☀️</span>
+
+        <h3>
+          Me desperté más tarde
+        </h3>
+
+        <p class="dato-principal">
+          28/06 · domingo · 13:37
+        </p>
+
+      </div>
+
+    </div>
+
+
     <!-- =========================
          COMPOSICIÓN DEL SUEÑO
          ========================= -->
@@ -813,10 +828,12 @@
       <section class="visualizacion visualizacion-composicion">
 
         <div class="grafico-svg">
+
           <object
             type="image/svg+xml"
             data="composicion_cada_noche.svg">
           </object>
+
         </div>
 
       </section>
@@ -826,7 +843,9 @@
 
         <span class="emoji">🌙</span>
 
-        <h3>Noche del 21 de junio</h3>
+        <h3>
+          Noche del 21 de junio
+        </h3>
 
         <p>
           Esta noche aparece como
@@ -846,10 +865,11 @@
 
 
     <!-- =========================
-         COMPARACIÓN POR DÍA DE SEMANA
+         COMPARACIÓN POR DÍA
          ========================= -->
 
     <div class="separador"></div>
+
 
     <div class="pregunta">
 
@@ -867,7 +887,7 @@
 
     <!-- FLOURISH -->
 
-    <section class="visualizacion visualizacion-flourish">
+    <section class="visualizacion">
 
       <div
         class="flourish-embed flourish-chart"
@@ -901,10 +921,11 @@
 
 
     <!-- =========================
-         RELACIÓN ENTRE PASOS Y SUEÑO
+         TABLEAU
          ========================= -->
 
     <div class="separador"></div>
+
 
     <div class="pregunta">
 
@@ -913,18 +934,15 @@
       </h2>
 
       <p>
-        Con los datos de pasos diarios y horas de sueño obtenidos durante
-        todo el mes, quise ver si coincidían o se relacionaban:
-        ¿los días que caminaba más, llegaba más cansada a la noche
-        y dormía más horas?
+        Con los datos de pasos diarios y horas de sueño obtenidos durante todo
+        el mes, quise ver si coincidían o se relacionaban: ¿los días que
+        caminaba más, llegaba más cansada a la noche y dormía más horas?
       </p>
 
     </div>
 
 
-    <!-- =========================
-         TABLEAU INTERACTIVO
-         ========================= -->
+    <!-- TABLEAU INTERACTIVO -->
 
     <section class="visualizacion-tableau">
 
@@ -1055,7 +1073,7 @@
 
 
     <!-- =========================
-         TEXTO DESPUÉS DE TABLEAU
+         TEXTO FINAL
          ========================= -->
 
     <div class="texto-despues-tableau">
