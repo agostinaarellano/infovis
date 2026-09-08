@@ -1,394 +1,227 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Junio en movimiento y descanso - Agostina Arellano</title>
+  <title>Junio en movimiento y descanso</title>
 
+  <!-- Fuentes -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Pacifico&display=swap"
-    rel="stylesheet">
-
+  <!-- Flourish -->
   <script src="https://public.flourish.studio/resources/embed.js"></script>
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
 
     body {
       margin: 0;
       padding: 0;
       background-color: #fdf0f6;
-      font-family: 'Quicksand', Arial, Helvetica, sans-serif;
-      color: #3f3540;
+      color: #6d4b61;
+      font-family: 'Quicksand', sans-serif;
       overflow-x: hidden;
-      position: relative;
     }
 
-    /* GARABATOS */
+    /* =========================
+       DECORACIÓN DE FONDO
+       ========================= */
 
-    .garabato {
-      position: absolute;
+    .decoracion {
+      position: fixed;
       z-index: 0;
       pointer-events: none;
+      color: #d98aad;
       opacity: 0.22;
-      color: #d99ab7;
+      font-size: 30px;
     }
 
-    .garabato-1 {
-      top: 80px;
+    .decoracion-1 {
+      top: 8%;
+      left: 4%;
+      transform: rotate(-15deg);
+    }
+
+    .decoracion-2 {
+      top: 18%;
+      right: 5%;
+      transform: rotate(12deg);
+    }
+
+    .decoracion-3 {
+      top: 38%;
       left: 3%;
-      font-size: 85px;
-      transform: rotate(-18deg);
-    }
-
-    .garabato-2 {
-      top: 210px;
-      right: 4%;
-      font-size: 70px;
       transform: rotate(20deg);
     }
 
-    .garabato-3 {
-      top: 470px;
-      left: 2%;
-      font-size: 75px;
-      transform: rotate(12deg);
-    }
-
-    .garabato-4 {
-      top: 650px;
-      right: 2%;
-      font-size: 90px;
-      transform: rotate(-10deg);
-    }
-
-    .garabato-5 {
-      top: 900px;
-      left: 4%;
-      font-size: 65px;
-      transform: rotate(16deg);
-    }
-
-    .garabato-6 {
-      top: 1100px;
-      right: 5%;
-      font-size: 80px;
-      transform: rotate(-16deg);
-    }
-
-    .garabato-7 {
-      top: 1350px;
-      left: 3%;
-      font-size: 75px;
-      transform: rotate(8deg);
-    }
-
-    .garabato-8 {
-      top: 1550px;
-      right: 3%;
-      font-size: 70px;
-      transform: rotate(-8deg);
-    }
-
-    .garabato-9 {
-      top: 1770px;
-      left: 6%;
-      font-size: 85px;
-      transform: rotate(22deg);
-    }
-
-    .garabato-10 {
-      top: 1980px;
+    .decoracion-4 {
+      top: 52%;
       right: 4%;
-      font-size: 75px;
       transform: rotate(-12deg);
     }
 
-    .garabato-11 {
-      top: 2250px;
-      left: 2%;
-      font-size: 65px;
-      transform: rotate(-15deg);
-    }
-
-    .garabato-12 {
-      top: 2450px;
-      right: 5%;
-      font-size: 85px;
-      transform: rotate(15deg);
-    }
-
-    .garabato-13 {
-      top: 2700px;
+    .decoracion-5 {
+      top: 70%;
       left: 5%;
-      font-size: 70px;
       transform: rotate(10deg);
     }
 
-    .garabato-14 {
-      top: 2900px;
-      right: 2%;
-      font-size: 75px;
-      transform: rotate(-20deg);
-    }
-
-    .garabato-15 {
-      top: 3150px;
-      left: 3%;
-      font-size: 80px;
-      transform: rotate(12deg);
-    }
-
-    .garabato-16 {
-      top: 3400px;
-      right: 4%;
-      font-size: 70px;
+    .decoracion-6 {
+      top: 82%;
+      right: 5%;
       transform: rotate(-15deg);
     }
 
+    .decoracion-7 {
+      top: 93%;
+      left: 4%;
+      transform: rotate(15deg);
+    }
 
-    /* CONTENEDOR */
+    /* =========================
+       CONTENEDOR PRINCIPAL
+       ========================= */
 
     .contenedor {
-      width: 90%;
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 35px 0 50px 0;
       position: relative;
       z-index: 1;
+      width: 100%;
+      max-width: 1150px;
+      margin: 0 auto;
+      padding: 45px 25px 70px 25px;
     }
 
+    /* =========================
+       ENCABEZADO
+       ========================= */
 
-    /* ALUMNA */
-
-    .tarjeta-alumna {
-      width: fit-content;
-      margin: 0 auto 35px auto;
-      background-color: rgba(255,255,255,0.75);
-      border: 2px solid #efc6d8;
-      border-radius: 999px;
-      padding: 10px 24px;
-      color: #76586a;
-      font-size: 15px;
-      font-weight: 600;
-      box-shadow: 0 4px 12px rgba(100,60,90,0.08);
-      position: relative;
+    .alumna {
+      display: inline-block;
+      background-color: #f4c9d9;
+      color: #6d4b61;
+      padding: 10px 22px;
+      border-radius: 30px;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+      margin-bottom: 25px;
     }
 
-    .tarjeta-alumna::before {
-      content: "✦";
-      margin-right: 9px;
-      color: #d18eae;
-    }
-
-    .tarjeta-alumna::after {
-      content: "✦";
-      margin-left: 9px;
-      color: #d18eae;
-    }
-
-
-    /* ENCABEZADO */
-
-    .encabezado {
-      text-align: center;
-      margin-bottom: 55px;
-    }
-
-    .encabezado h1 {
+    .titulo {
       font-family: 'Pacifico', cursive;
       font-size: 62px;
-      margin-bottom: 15px;
-      color: #6d4b61;
-      font-weight: 400;
-    }
-
-    .encabezado p {
-      font-size: 20px;
-      color: #806f7a;
-      margin: 0 auto;
-      max-width: 750px;
-      line-height: 1.6;
-    }
-
-
-    /* TÍTULOS DE SECCIÓN */
-
-    .seccion-titulo {
+      line-height: 1.15;
       text-align: center;
-      margin: 25px 0 25px 0;
+      color: #6d4b61;
+      margin: 0 auto 22px auto;
     }
 
-    .seccion-titulo span {
-      display: inline-block;
+    .introduccion {
+      max-width: 800px;
+      margin: 0 auto 45px auto;
+      text-align: center;
+      font-size: 17px;
+      line-height: 1.7;
+      color: #725f80;
+    }
+
+    /* =========================
+       PILLS / SECCIONES
+       ========================= */
+
+    .pill {
+      width: fit-content;
+      margin: 0 auto 25px auto;
       padding: 10px 22px;
-      border-radius: 999px;
-      font-size: 16px;
+      border-radius: 30px;
+      font-size: 15px;
       font-weight: 700;
-      letter-spacing: 0.5px;
     }
 
-    .seccion-actividad span {
+    .pill-pasos {
       background-color: #f4c9d9;
       color: #6d4b61;
     }
 
-    .seccion-sueno span {
-      background-color: #e0cef4;
-      color: #6e4b8c;
-    }
-
-
-    /* PREGUNTAS */
-
-    .pregunta {
-      text-align: center;
-      margin: 35px auto 22px auto;
-      max-width: 800px;
-    }
-
-    .pregunta h2 {
-      font-size: 25px;
-      color: #6e4b8c;
-      font-weight: 700;
-      margin: 0;
-      line-height: 1.4;
-    }
-
-    .pregunta p {
-      font-size: 17px;
-      color: #806f7a;
-      max-width: 700px;
-      margin: 12px auto 0 auto;
-      line-height: 1.5;
-    }
-
-    .pregunta .linea {
-      width: 55px;
-      height: 4px;
-      border-radius: 999px;
-      background-color: #b99ad8;
-      margin: 14px auto 0 auto;
-    }
-
-
-    /* VISUALIZACIONES */
-
-    .visualizacion {
-      background-color: white;
-      border-radius: 18px;
-      padding: 30px;
-      margin-bottom: 25px;
-      box-shadow: 0 6px 20px rgba(100,60,90,0.10);
-      box-sizing: border-box;
-    }
-
-    .grafico {
-      width: 100%;
-      overflow: hidden;
-      border-radius: 10px;
-    }
-
-
-    /* SEPARADOR */
-
-    .separador {
-      width: 80px;
-      height: 5px;
-      border-radius: 999px;
-      background: linear-gradient(90deg,#d99ab7,#b99ad8);
-      margin: 15px auto 45px auto;
-    }
-
-
-    /* TARJETA PROMEDIO */
-
-    .tarjeta-promedio {
-      border-radius: 18px;
-      padding: 28px 35px;
-      margin: 25px auto 25px auto;
-      cursor: default;
-      transition:
-        background-color 0.25s ease,
-        transform 0.25s ease,
-        box-shadow 0.25s ease;
-    }
-
-
-    /* PROMEDIO PASOS */
-
-    .tarjeta-pasos {
-      background-color: #e8b6ca;
-      box-shadow: 0 6px 18px rgba(109,75,97,0.12);
-    }
-
-    .tarjeta-pasos:hover {
-      background-color: #d99ab7;
-      transform: translateY(-4px);
-      box-shadow: 0 10px 24px rgba(109,75,97,0.20);
-    }
-
-    .tarjeta-pasos .titulo-promedio {
-      color: #664455;
-    }
-
-    .tarjeta-pasos .descripcion-promedio {
-      color: #714f60;
-    }
-
-
-    /* PROMEDIO SUEÑO */
-
-    .tarjeta-sueno {
-      background-color: #cdb3e6;
-      box-shadow: 0 6px 18px rgba(98,70,130,0.12);
-    }
-
-    .tarjeta-sueno:hover {
-      background-color: #b99ad8;
-      transform: translateY(-4px);
-      box-shadow: 0 10px 24px rgba(98,70,130,0.20);
-    }
-
-    .tarjeta-sueno .titulo-promedio {
-      color: #5a3b74;
-    }
-
-    .tarjeta-sueno .descripcion-promedio {
+    .pill-sueno {
+      background-color: #e8ddf4;
       color: #644c78;
     }
 
-    .titulo-promedio {
-      font-size: 17px;
+    /* =========================
+       TARJETAS PROMEDIO
+       ========================= */
+
+    .tarjeta-promedio {
+      width: 100%;
+      max-width: 650px;
+      margin: 0 auto 30px auto;
+      padding: 30px 25px;
+      border-radius: 18px;
+      text-align: center;
+      transition: transform 0.25s ease,
+                  box-shadow 0.25s ease,
+                  background-color 0.25s ease;
+    }
+
+    .tarjeta-promedio:hover {
+      transform: translateY(-4px);
+    }
+
+    .tarjeta-promedio .emoji {
+      font-size: 38px;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .tarjeta-promedio h2 {
+      margin: 0 0 10px 0;
+      font-size: 20px;
+    }
+
+    .tarjeta-promedio .numero {
+      margin: 0;
+      font-size: 30px;
       font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 12px;
     }
 
-    .numero-promedio {
-      font-size: 45px;
-      font-weight: 700;
-      color: #ffffff;
-      margin-bottom: 5px;
+    .tarjeta-promedio p {
+      margin: 10px auto 0 auto;
+      max-width: 500px;
+      font-size: 14px;
+      line-height: 1.5;
     }
 
-    .equivalencia {
-      font-size: 24px;
-      font-weight: 600;
-      margin-left: 12px;
-      opacity: 0.9;
+    .promedio-pasos {
+      background-color: #f4c9d9;
+      color: #6d4b61;
+      box-shadow: 0 6px 20px rgba(109, 75, 97, 0.10);
     }
 
-    .descripcion-promedio {
-      font-size: 17px;
+    .promedio-pasos:hover {
+      background-color: #e8b0c8;
+      box-shadow: 0 10px 24px rgba(109, 75, 97, 0.18);
     }
 
+    .promedio-sueno {
+      background-color: #e8ddf4;
+      color: #644c78;
+      box-shadow: 0 6px 20px rgba(98, 70, 130, 0.10);
+    }
 
-    /* FILA DE TARJETAS */
+    .promedio-sueno:hover {
+      background-color: #d8c2ee;
+      box-shadow: 0 10px 24px rgba(98, 70, 130, 0.18);
+    }
+
+    /* =========================
+       FILAS DE TARJETAS
+       ========================= */
 
     .fila-tarjetas {
       display: flex;
@@ -404,15 +237,13 @@
       min-height: 170px;
       padding: 25px;
       border-radius: 18px;
-      box-sizing: border-box;
       text-align: center;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease,
-        background-color 0.25s ease;
+      transition: transform 0.25s ease,
+                  box-shadow 0.25s ease,
+                  background-color 0.25s ease;
     }
 
     .tarjeta-dato:hover {
@@ -432,40 +263,105 @@
 
     .tarjeta-dato .dato-principal {
       margin: 0;
-      font-size: 22px;
+      font-size: 19px;
       font-weight: 700;
+      line-height: 1.45;
     }
-
-
-    /* TARJETAS PASOS */
 
     .dato-pasos {
       background-color: #f4c9d9;
       color: #6d4b61;
-      box-shadow: 0 6px 18px rgba(109,75,97,0.10);
+      box-shadow: 0 6px 18px rgba(109, 75, 97, 0.10);
     }
 
     .dato-pasos:hover {
       background-color: #e8b0c8;
-      box-shadow: 0 10px 24px rgba(109,75,97,0.18);
+      box-shadow: 0 10px 24px rgba(109, 75, 97, 0.18);
     }
-
-
-    /* TARJETAS SUEÑO */
 
     .dato-sueno {
       background-color: #e8ddf4;
       color: #644c78;
-      box-shadow: 0 6px 18px rgba(98,70,130,0.10);
+      box-shadow: 0 6px 18px rgba(98, 70, 130, 0.10);
     }
 
     .dato-sueno:hover {
       background-color: #d8c2ee;
-      box-shadow: 0 10px 24px rgba(98,70,130,0.18);
+      box-shadow: 0 10px 24px rgba(98, 70, 130, 0.18);
     }
 
+    /* =========================
+       SEPARADORES
+       ========================= */
 
-    /* COMPOSICIÓN DEL SUEÑO + NOCHE 21 */
+    .separador {
+      width: 75%;
+      max-width: 850px;
+      height: 1px;
+      background-color: #dfbfd0;
+      margin: 20px auto 45px auto;
+    }
+
+    /* =========================
+       PREGUNTAS / TEXTOS
+       ========================= */
+
+    .pregunta {
+      max-width: 850px;
+      margin: 0 auto 35px auto;
+      text-align: center;
+    }
+
+    .pregunta h2 {
+      margin: 0 0 15px 0;
+      font-size: 25px;
+      line-height: 1.35;
+      color: #6d4b61;
+    }
+
+    .pregunta p {
+      margin: 0 auto;
+      max-width: 750px;
+      font-size: 16px;
+      line-height: 1.7;
+      color: #725f80;
+    }
+
+    /* =========================
+       VISUALIZACIONES
+       ========================= */
+
+    .visualizacion {
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto 55px auto;
+      background-color: white;
+      border-radius: 18px;
+      padding: 20px;
+      box-shadow: 0 6px 20px rgba(100, 60, 90, 0.10);
+    }
+
+    /* =========================
+       DATAWRAPPER
+       ========================= */
+
+    .visualizacion-datawrapper {
+      overflow: hidden;
+    }
+
+    /* =========================
+       FLOURISH
+       ========================= */
+
+    .visualizacion-flourish {
+      max-width: 900px;
+      padding: 20px;
+      overflow: hidden;
+    }
+
+    /* =========================
+       COMPOSICIÓN DEL SUEÑO
+       ========================= */
 
     .composicion-fila {
       width: 100%;
@@ -483,7 +379,7 @@
       border-radius: 18px;
       padding: 20px;
       margin: 0;
-      box-shadow: 0 6px 20px rgba(100,60,90,0.10);
+      box-shadow: 0 6px 20px rgba(100, 60, 90, 0.10);
       box-sizing: border-box;
       display: flex;
       justify-content: center;
@@ -505,8 +401,9 @@
       display: block;
     }
 
-
-    /* TARJETA NOCHE DEL 21 */
+    /* =========================
+       TARJETA NOCHE 21
+       ========================= */
 
     .nota-sueno {
       width: 270px;
@@ -518,21 +415,20 @@
       padding: 30px 25px;
       box-sizing: border-box;
       text-align: center;
-      box-shadow: 0 6px 20px rgba(98,70,130,0.10);
+      box-shadow: 0 6px 20px rgba(98, 70, 130, 0.10);
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      transition:
-        background-color 0.25s ease,
-        transform 0.25s ease,
-        box-shadow 0.25s ease;
+      transition: background-color 0.25s ease,
+                  transform 0.25s ease,
+                  box-shadow 0.25s ease;
     }
 
     .nota-sueno:hover {
       background-color: #d8c2ee;
       transform: translateY(-4px);
-      box-shadow: 0 10px 24px rgba(98,70,130,0.18);
+      box-shadow: 0 10px 24px rgba(98, 70, 130, 0.18);
     }
 
     .nota-sueno .emoji {
@@ -560,95 +456,98 @@
       color: #604477;
     }
 
-
-    /* FLOURISH */
-
-    .visualizacion-flourish {
-      max-width: 950px;
-      margin: 0 auto 30px auto;
-      padding: 30px;
-      box-sizing: border-box;
-    }
-
-    .flourish-embed {
-      width: 100%;
-    }
-
-
-    /* CONCLUSIÓN */
+    /* =========================
+       TARJETA FINAL
+       ========================= */
 
     .tarjeta-cierre {
       width: 100%;
-      max-width: 850px;
-      margin: 10px auto 0 auto;
-      padding: 30px 40px;
-      box-sizing: border-box;
+      max-width: 750px;
+      margin: 0 auto 60px auto;
+      padding: 30px 35px;
       background-color: #f4c9d9;
-      border: 2px solid #e8b0c8;
-      border-radius: 20px;
+      border-radius: 18px;
+      box-shadow: 0 6px 20px rgba(109, 75, 97, 0.10);
       text-align: center;
-      box-shadow: 0 6px 18px rgba(109,75,97,0.10);
-      transition:
-        background-color 0.25s ease,
-        transform 0.25s ease,
-        box-shadow 0.25s ease;
-    }
-
-    .tarjeta-cierre:hover {
-      background-color: #e8b0c8;
-      transform: translateY(-4px);
-      box-shadow: 0 10px 24px rgba(109,75,97,0.18);
     }
 
     .tarjeta-cierre p {
-      margin: 0 auto;
-      max-width: 650px;
-      color: #714f60;
-      font-size: 16px;
-      line-height: 1.55;
+      margin: 0;
+      font-size: 17px;
+      line-height: 1.7;
+      color: #6d4b61;
     }
 
     .tarjeta-cierre strong {
-      color: #6d4b61;
       font-weight: 700;
     }
 
+    /* =========================
+       TABLEAU
+       ========================= */
 
-    /* FOOTER */
-
-    .footer {
-      text-align: center;
-      color: #8d7c87;
-      font-size: 14px;
-      margin-top: 55px;
+    .visualizacion-tableau {
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto 35px auto;
+      background-color: white;
+      border-radius: 18px;
+      padding: 25px;
+      box-sizing: border-box;
+      box-shadow: 0 6px 20px rgba(100, 60, 90, 0.10);
+      overflow: hidden;
     }
 
+    .visualizacion-tableau .tableauPlaceholder {
+      width: 100%;
+      margin: 0 auto;
+    }
 
-    /* MOBILE */
+    .texto-despues-tableau {
+      max-width: 850px;
+      margin: 0 auto 60px auto;
+      text-align: center;
+    }
 
-    @media (max-width:700px) {
+    .texto-despues-tableau p {
+      margin: 0;
+      font-size: 16px;
+      line-height: 1.7;
+      color: #725f80;
+    }
 
-      .encabezado h1 {
-        font-size: 44px;
+    /* =========================
+       RESPONSIVE
+       ========================= */
+
+    @media (max-width: 700px) {
+
+      .contenedor {
+        padding: 30px 15px 50px 15px;
       }
 
-      .encabezado p {
-        font-size: 17px;
+      .titulo {
+        font-size: 42px;
       }
 
-      .visualizacion {
-        padding: 18px;
+      .introduccion {
+        font-size: 15px;
       }
 
-      .numero-promedio {
-        font-size: 36px;
+      .fila-tarjetas {
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
       }
 
-      .equivalencia {
-        display: block;
-        font-size: 20px;
-        margin-left: 0;
-        margin-top: 5px;
+      .tarjeta-dato {
+        width: 100%;
+      }
+
+      .separador {
+        width: 85%;
+        margin-top: 10px;
+        margin-bottom: 35px;
       }
 
       .pregunta h2 {
@@ -656,16 +555,7 @@
       }
 
       .pregunta p {
-        font-size: 15px;
-      }
-
-      .fila-tarjetas {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .tarjeta-dato {
-        width: 100%;
+        font-size: 14px;
       }
 
       .composicion-fila {
@@ -692,338 +582,251 @@
         min-height: 250px;
       }
 
-      .visualizacion-flourish {
-        padding: 18px;
-      }
-
-      .garabato {
-        opacity: 0.13;
-      }
-
       .tarjeta-cierre {
-        padding: 25px 22px;
+        padding: 25px 20px;
       }
 
       .tarjeta-cierre p {
         font-size: 15px;
       }
 
-    }
+      .visualizacion-tableau {
+        padding: 10px;
+      }
 
+      .texto-despues-tableau {
+        padding: 0 15px;
+      }
+
+      .texto-despues-tableau p {
+        font-size: 14px;
+        line-height: 1.6;
+      }
+    }
   </style>
 </head>
 
+
 <body>
 
-  <!-- GARABATOS -->
+  <!-- =========================
+       DECORACIONES
+       ========================= -->
 
-  <div class="garabato garabato-1">〰</div>
-  <div class="garabato garabato-2">♡</div>
-  <div class="garabato garabato-3">⌁</div>
-  <div class="garabato garabato-4">✦</div>
-  <div class="garabato garabato-5">〰</div>
-  <div class="garabato garabato-6">♡</div>
-  <div class="garabato garabato-7">✧</div>
-  <div class="garabato garabato-8">⌁</div>
-  <div class="garabato garabato-9">♡</div>
-  <div class="garabato garabato-10">✦</div>
-  <div class="garabato garabato-11">〰</div>
-  <div class="garabato garabato-12">♡</div>
-  <div class="garabato garabato-13">✧</div>
-  <div class="garabato garabato-14">⌁</div>
-  <div class="garabato garabato-15">〰</div>
-  <div class="garabato garabato-16">♡</div>
+  <div class="decoracion decoracion-1">〰</div>
+  <div class="decoracion decoracion-2">♡</div>
+  <div class="decoracion decoracion-3">⌁</div>
+  <div class="decoracion decoracion-4">✦</div>
+  <div class="decoracion decoracion-5">✧</div>
+  <div class="decoracion decoracion-6">♡</div>
+  <div class="decoracion decoracion-7">〰</div>
 
-  <div class="contenedor">
 
-    <!-- ALUMNA -->
+  <main class="contenedor">
 
-    <div class="tarjeta-alumna">
-      Alumna: María Agostina Arellano
+    <!-- =========================
+         ENCABEZADO
+         ========================= -->
+
+    <div style="text-align: center;">
+      <div class="alumna">
+        ✦ Alumna: María Agostina Arellano ✦
+      </div>
     </div>
 
+    <h1 class="titulo">
+      Junio en movimiento y descanso
+    </h1>
 
-    <!-- ENCABEZADO -->
+    <p class="introduccion">
+      Un recorrido por mis pasos y mis horas de sueño durante junio:
+      cuánto caminé, cuánto dormí y cómo se distribuyeron mis hábitos
+      a lo largo del mes.
+    </p>
 
-    <div class="encabezado">
 
-      <h1>Junio en movimiento y descanso</h1>
+    <!-- =========================
+         ACTIVIDAD
+         ========================= -->
 
+    <div class="pill pill-pasos">
+      👟 ACTIVIDAD
+    </div>
+
+    <div class="tarjeta-promedio promedio-pasos">
+      <span class="emoji">🚶‍♀️</span>
+      <h2>Promedio diario de pasos</h2>
+      <p class="numero">8.295 pasos</p>
       <p>
-        Un recorrido por mis pasos y mis horas de sueño durante junio:
-        cuánto caminé, cuánto dormí y cómo se distribuyeron mis hábitos a lo largo del mes.
+        Este es el promedio de pasos que hice por día durante junio.
       </p>
+    </div>
+
+
+    <!-- DÍAS DE MÁS Y MENOS PASOS -->
+
+    <div class="fila-tarjetas">
+
+      <div class="tarjeta-dato dato-pasos">
+        <span class="emoji-dato">🚶‍♀️</span>
+        <h3>Día que más caminé</h3>
+        <p class="dato-principal">
+          19/06 · viernes · 16.279 pasos
+        </p>
+      </div>
+
+      <div class="tarjeta-dato dato-pasos">
+        <span class="emoji-dato">🧘‍♀️</span>
+        <h3>Día que menos caminé</h3>
+        <p class="dato-principal">
+          23/06 · martes · 3.271 pasos
+        </p>
+      </div>
 
     </div>
 
 
-    <!-- ACTIVIDAD -->
+    <!-- GRÁFICO DE PASOS -->
 
-    <div class="seccion-titulo seccion-actividad">
-      <span>👟 ACTIVIDAD</span>
-    </div>
+    <section class="visualizacion visualizacion-datawrapper">
 
+      <div style="min-height:427px" id="datawrapper-vis-05SW9">
+        <script
+          type="text/javascript"
+          defer
+          src="https://datawrapper.dwcdn.net/05SW9/embed.js"
+          charset="utf-8"
+          data-target="#datawrapper-vis-05SW9">
+        </script>
 
-    <!-- GRÁFICO PASOS -->
-
-    <section class="visualizacion">
-
-      <div class="grafico">
-
-        <div
-          style="min-height:427px"
-          id="datawrapper-vis-05SW9">
-
-          <script
-            type="text/javascript"
-            defer
-            src="https://datawrapper.dwcdn.net/05SW9/embed.js"
-            charset="utf-8"
-            data-target="#datawrapper-vis-05SW9">
-          </script>
-
-          <noscript>
-            <img
-              src="https://datawrapper.dwcdn.net/05SW9/full.png"
-              alt="¿Cuántos pasos caminé cada día de Junio?">
-          </noscript>
-
-        </div>
-
+        <noscript>
+          <img
+            src="https://datawrapper.dwcdn.net/05SW9/full.png"
+            alt="¿Cuántos pasos caminé cada día de Junio? (Gráfico de columnas)"
+          />
+        </noscript>
       </div>
 
     </section>
 
 
-    <!-- PROMEDIO PASOS -->
+    <!-- =========================
+         SUEÑO
+         ========================= -->
 
-    <div class="tarjeta-promedio tarjeta-pasos">
+    <div class="pill pill-sueno">
+      🌙 SUEÑO
+    </div>
 
-      <div class="titulo-promedio">
-        👟 PROMEDIO DIARIO DE PASOS EN JUNIO
-      </div>
-
-      <div class="numero-promedio">
-        8.295 pasos
-      </div>
-
-      <div class="descripcion-promedio">
-        Promedio de pasos caminados por día durante junio
-      </div>
-
+    <div class="tarjeta-promedio promedio-sueno">
+      <span class="emoji">🌙</span>
+      <h2>Promedio diario de sueño</h2>
+      <p class="numero">
+        6,29 horas = 6 h 17 min 24 s
+      </p>
+      <p>
+        Este es el promedio de horas que dormí por noche durante junio.
+      </p>
     </div>
 
 
-    <!-- MÁXIMO Y MÍNIMO DE PASOS -->
+    <!-- PRIMERA FILA DE DATOS DE SUEÑO -->
 
     <div class="fila-tarjetas">
 
-      <div class="tarjeta-dato dato-pasos">
-
-        <div class="emoji-dato">🚶‍♀️</div>
-
-        <h3>
-          Día que más caminé
-        </h3>
-
+      <div class="tarjeta-dato dato-sueno">
+        <span class="emoji-dato">🌙</span>
+        <h3>Me acosté más temprano</h3>
         <p class="dato-principal">
-          19/06 · 16.279 pasos
+          25/06 · jueves · 23:49
         </p>
-
       </div>
 
-      <div class="tarjeta-dato dato-pasos">
-
-        <div class="emoji-dato">🧘‍♀️</div>
-
-        <h3>
-          Día que menos caminé
-        </h3>
-
+      <div class="tarjeta-dato dato-sueno">
+        <span class="emoji-dato">🌅</span>
+        <h3>Me desperté más temprano</h3>
         <p class="dato-principal">
-          23/06 · 3.271 pasos
+          16/06 · martes · 07:55
         </p>
-
       </div>
 
     </div>
 
 
-    <!-- SECCIÓN SUEÑO -->
+    <!-- SEGUNDA FILA DE DATOS DE SUEÑO -->
 
-    <div class="separador"></div>
+    <div class="fila-tarjetas">
 
-    <div class="seccion-titulo seccion-sueno">
-      <span>🌙 SUEÑO</span>
+      <div class="tarjeta-dato dato-sueno">
+        <span class="emoji-dato">🌙</span>
+        <h3>Me acosté más tarde</h3>
+        <p class="dato-principal">
+          20/06 · sábado · 05:27
+        </p>
+      </div>
+
+      <div class="tarjeta-dato dato-sueno">
+        <span class="emoji-dato">☀️</span>
+        <h3>Me desperté más tarde</h3>
+        <p class="dato-principal">
+          28/06 · domingo · 13:37
+        </p>
+      </div>
+
     </div>
 
 
     <!-- GRÁFICO HORAS DE SUEÑO -->
 
-    <section class="visualizacion">
+    <section class="visualizacion visualizacion-datawrapper">
 
-      <div class="grafico">
+      <div
+        style="min-height:426px; max-width:700px; margin:0 auto;"
+        id="datawrapper-vis-tVxO1">
 
-        <div
-          style="min-height:426px; max-width:700px; margin:0 auto;"
-          id="datawrapper-vis-tVxO1">
+        <script
+          type="text/javascript"
+          defer
+          src="https://datawrapper.dwcdn.net/tVxO1/embed.js"
+          charset="utf-8"
+          data-target="#datawrapper-vis-tVxO1">
+        </script>
 
-          <script
-            type="text/javascript"
-            defer
-            src="https://datawrapper.dwcdn.net/tVxO1/embed.js"
-            charset="utf-8"
-            data-target="#datawrapper-vis-tVxO1">
-          </script>
-
-          <noscript>
-            <img
-              src="https://datawrapper.dwcdn.net/tVxO1/full.png"
-              alt="¿Cuántas horas dormí cada noche de Junio?">
-          </noscript>
-
-        </div>
+        <noscript>
+          <img
+            src="https://datawrapper.dwcdn.net/tVxO1/full.png"
+            alt="¿Cuántas horas dormí cada noche de Junio? (Gráfico de columnas)"
+          />
+        </noscript>
 
       </div>
 
     </section>
 
 
-    <!-- PROMEDIO SUEÑO -->
-
-    <div class="tarjeta-promedio tarjeta-sueno">
-
-      <div class="titulo-promedio">
-        🌙 PROMEDIO DE HORAS DE SUEÑO EN JUNIO
-      </div>
-
-      <div class="numero-promedio">
-
-        6,29 horas
-
-        <span class="equivalencia">
-          = 6 h 17 min 24 s
-        </span>
-
-      </div>
-
-      <div class="descripcion-promedio">
-        Promedio de horas dormidas por noche durante junio
-      </div>
-
-    </div>
-
-
-    <!-- TARJETAS HORARIOS: MÁS TEMPRANO -->
-
-    <div class="fila-tarjetas">
-
-      <div class="tarjeta-dato dato-sueno">
-
-        <div class="emoji-dato">🌙</div>
-
-        <h3>
-          Te acostaste más temprano
-        </h3>
-
-        <p class="dato-principal">
-          25/06 · 23:49
-        </p>
-
-      </div>
-
-      <div class="tarjeta-dato dato-sueno">
-
-        <div class="emoji-dato">🌅</div>
-
-        <h3>
-          Te despertaste más temprano
-        </h3>
-
-        <p class="dato-principal">
-          16/06 · 07:55
-        </p>
-
-      </div>
-
-    </div>
-
-
-    <!-- TARJETAS HORARIOS: MÁS TARDE -->
-
-    <div class="fila-tarjetas">
-
-      <div class="tarjeta-dato dato-sueno">
-
-        <div class="emoji-dato">🌙</div>
-
-        <h3>
-          Te acostaste más tarde
-        </h3>
-
-        <p class="dato-principal">
-          20/06 · 05:27
-        </p>
-
-      </div>
-
-      <div class="tarjeta-dato dato-sueno">
-
-        <div class="emoji-dato">☀️</div>
-
-        <h3>
-          Te despertaste más tarde
-        </h3>
-
-        <p class="dato-principal">
-          28/06 · 13:37
-        </p>
-
-      </div>
-
-    </div>
-
-
-    <!-- PREGUNTA COMPOSICIÓN DEL SUEÑO -->
-
-    <div class="pregunta">
-
-      <h2>
-        ¿Cómo se compuso mi sueño a lo largo de cada noche de junio?
-      </h2>
-
-      <div class="linea"></div>
-
-    </div>
-
-
-    <!-- GRÁFICO + NOCHE DEL 21 -->
+    <!-- =========================
+         COMPOSICIÓN DEL SUEÑO
+         ========================= -->
 
     <div class="composicion-fila">
 
       <section class="visualizacion visualizacion-composicion">
 
         <div class="grafico-svg">
-
           <object
             type="image/svg+xml"
             data="composicion_cada_noche.svg">
           </object>
-
         </div>
 
       </section>
 
 
-      <!-- ACLARACIÓN NOCHE DEL 21 -->
-
       <div class="nota-sueno">
 
         <span class="emoji">🌙</span>
 
-        <h3>
-          Noche del 21 de junio
-        </h3>
+        <h3>Noche del 21 de junio</h3>
 
         <p>
           Esta noche aparece como
@@ -1033,7 +836,8 @@
 
         <p>
           Esto podría deberse a que el reloj no registró correctamente
-          la información del sueño o que no se utilizó adecuadamente el dispositivo.
+          la información del sueño o que no se utilizó adecuadamente
+          el dispositivo.
         </p>
 
       </div>
@@ -1041,7 +845,9 @@
     </div>
 
 
-    <!-- COMPARACIÓN POR DÍA DE SEMANA -->
+    <!-- =========================
+         COMPARACIÓN POR DÍA DE SEMANA
+         ========================= -->
 
     <div class="separador"></div>
 
@@ -1059,7 +865,7 @@
     </div>
 
 
-    <!-- GRÁFICO FLOURISH -->
+    <!-- FLOURISH -->
 
     <section class="visualizacion visualizacion-flourish">
 
@@ -1071,38 +877,201 @@
     </section>
 
 
-    <!-- CONCLUSIÓN DEL ÚLTIMO GRÁFICO -->
+    <!-- =========================
+         CONCLUSIÓN
+         ========================= -->
 
     <div class="tarjeta-cierre">
 
       <p>
-
         Según los promedios de junio, los
         <strong>miércoles</strong>
         fueron los días en los que más dormí, con
         <strong>7,28 horas</strong>
         en promedio.
-
         <br><br>
-
         En cambio, los
         <strong>viernes</strong>
         fueron los días en los que más caminé, con
         <strong>10.178 pasos</strong>
         en promedio.
-
       </p>
 
     </div>
 
 
-    <!-- FOOTER -->
+    <!-- =========================
+         RELACIÓN ENTRE PASOS Y SUEÑO
+         ========================= -->
 
-    <div class="footer">
-      Trabajo Práctico de Visualización de Datos · Agostina Arellano
+    <div class="separador"></div>
+
+    <div class="pregunta">
+
+      <h2>
+        ¿Dormí mejor los días que caminé más?
+      </h2>
+
+      <p>
+        Con los datos de pasos diarios y horas de sueño obtenidos durante
+        todo el mes, quise ver si coincidían o se relacionaban:
+        ¿los días que caminaba más, llegaba más cansada a la noche
+        y dormía más horas?
+      </p>
+
     </div>
 
-  </div>
+
+    <!-- =========================
+         TABLEAU INTERACTIVO
+         ========================= -->
+
+    <section class="visualizacion-tableau">
+
+      <div
+        class="tableauPlaceholder"
+        id="viz1788836427211"
+        style="position: relative">
+
+        <noscript>
+
+          <a href='#'>
+
+            <img
+              alt='Sueño y Pasos por día'
+              src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Su&#47;SueoyPasospordajunio&#47;SueoyPasosporda&#47;1_rss.png'
+              style='border: none'
+            />
+
+          </a>
+
+        </noscript>
+
+
+        <object
+          class='tableauViz'
+          style='display:none;'>
+
+          <param
+            name='host_url'
+            value='https%3A%2F%2Fpublic.tableau.com%2F' />
+
+          <param
+            name='embed_code_version'
+            value='3' />
+
+          <param
+            name='site_root'
+            value='' />
+
+          <param
+            name='name'
+            value='SueoyPasospordajunio&#47;SueoyPasosporda' />
+
+          <param
+            name='tabs'
+            value='no' />
+
+          <param
+            name='toolbar'
+            value='yes' />
+
+          <param
+            name='static_image'
+            value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Su&#47;SueoyPasospordajunio&#47;SueoyPasosporda&#47;1.png' />
+
+          <param
+            name='animate_transition'
+            value='yes' />
+
+          <param
+            name='display_static_image'
+            value='yes' />
+
+          <param
+            name='display_spinner'
+            value='yes' />
+
+          <param
+            name='display_overlay'
+            value='yes' />
+
+          <param
+            name='display_count'
+            value='yes' />
+
+          <param
+            name='language'
+            value='es-ES' />
+
+          <param
+            name='filter'
+            value='publish=yes' />
+
+        </object>
+
+      </div>
+
+
+      <script type='text/javascript'>
+
+        var divElement =
+          document.getElementById('viz1788836427211');
+
+        var vizElement =
+          divElement.getElementsByTagName('object')[0];
+
+        if (divElement.offsetWidth > 800) {
+
+          vizElement.style.width = '820px';
+          vizElement.style.height = '587px';
+
+        } else if (divElement.offsetWidth > 500) {
+
+          vizElement.style.width = '820px';
+          vizElement.style.height = '587px';
+
+        } else {
+
+          vizElement.style.width = '100%';
+          vizElement.style.height = '727px';
+
+        }
+
+        var scriptElement =
+          document.createElement('script');
+
+        scriptElement.src =
+          'https://public.tableau.com/javascripts/api/viz_v1.js';
+
+        vizElement.parentNode.insertBefore(
+          scriptElement,
+          vizElement
+        );
+
+      </script>
+
+    </section>
+
+
+    <!-- =========================
+         TEXTO DESPUÉS DE TABLEAU
+         ========================= -->
+
+    <div class="texto-despues-tableau">
+
+      <p>
+        Esperaba encontrar que los días que caminaba más, dormía más esa noche.
+        Sin embargo, los datos no lo confirman: la relación es prácticamente
+        nula. Mi sueño parece depender de otros factores y no de mi actividad
+        física diaria — probablemente influye más que suelo acostarme tarde
+        y tengo que levantarme entre las 8:10 y 8:30 para trabajar, sin importar
+        cuánto caminé el día anterior.
+      </p>
+
+    </div>
+
+  </main>
 
 </body>
 </html>
