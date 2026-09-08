@@ -614,6 +614,29 @@
     }
 
 
+    /* TABLEAU */
+
+    .visualizacion-tableau {
+      max-width: 900px;
+      margin: 35px auto 25px auto;
+      overflow: hidden;
+    }
+
+    .tableauPlaceholder {
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .texto-despues-tableau {
+      text-align: center;
+      max-width: 800px;
+      margin: 20px auto 0 auto;
+      color: #806f7a;
+      font-size: 17px;
+      line-height: 1.6;
+    }
+
+
     /* FOOTER */
 
     .footer {
@@ -705,6 +728,14 @@
       }
 
       .tarjeta-cierre p {
+        font-size: 15px;
+      }
+
+      .visualizacion-tableau {
+        padding: 18px;
+      }
+
+      .texto-despues-tableau {
         font-size: 15px;
       }
 
@@ -827,7 +858,7 @@
         </h3>
 
         <p class="dato-principal">
-          19/06 · 16.279 pasos
+          19/06 · viernes · 16.279 pasos
         </p>
 
       </div>
@@ -841,7 +872,7 @@
         </h3>
 
         <p class="dato-principal">
-          23/06 · 3.271 pasos
+          23/06 · martes · 3.271 pasos
         </p>
 
       </div>
@@ -923,11 +954,11 @@
         <div class="emoji-dato">🌙</div>
 
         <h3>
-          Te acostaste más temprano
+          Me acosté más temprano
         </h3>
 
         <p class="dato-principal">
-          25/06 · 23:49
+          25/06 · jueves · 23:49
         </p>
 
       </div>
@@ -937,11 +968,11 @@
         <div class="emoji-dato">🌅</div>
 
         <h3>
-          Te despertaste más temprano
+          Me desperté más temprano
         </h3>
 
         <p class="dato-principal">
-          16/06 · 07:55
+          16/06 · martes · 07:55
         </p>
 
       </div>
@@ -958,11 +989,11 @@
         <div class="emoji-dato">🌙</div>
 
         <h3>
-          Te acostaste más tarde
+          Me acosté más tarde
         </h3>
 
         <p class="dato-principal">
-          20/06 · 05:27
+          20/06 · sábado · 05:27
         </p>
 
       </div>
@@ -972,11 +1003,11 @@
         <div class="emoji-dato">☀️</div>
 
         <h3>
-          Te despertaste más tarde
+          Me desperté más tarde
         </h3>
 
         <p class="dato-principal">
-          28/06 · 13:37
+          28/06 · domingo · 13:37
         </p>
 
       </div>
@@ -1091,6 +1122,118 @@
         <strong>10.178 pasos</strong>
         en promedio.
 
+      </p>
+
+    </div>
+
+
+    <!-- TABLEAU -->
+
+    <div class="pregunta">
+
+      <h2>
+        ¿Dormí mejor los días que caminé más?
+      </h2>
+
+      <p>
+        Con los datos de pasos diarios y horas de sueño obtenidos durante todo el mes,
+        quise ver si coincidían o se relacionaban: ¿los días que caminaba más,
+        llegaba más cansada a la noche y dormía más horas?
+      </p>
+
+    </div>
+
+
+    <section class="visualizacion visualizacion-tableau">
+
+      <div
+        class='tableauPlaceholder'
+        id='viz1788836427211'
+        style='position: relative'>
+
+        <noscript>
+          <a href='#'>
+            <img
+              alt='Sueño y Pasos por día '
+              src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Su&#47;SueoyPasospordajunio&#47;SueoyPasosporda&#47;1_rss.png'
+              style='border: none'>
+          </a>
+        </noscript>
+
+        <object
+          class='tableauViz'
+          style='display:none;'>
+
+          <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+          <param name='embed_code_version' value='3' />
+          <param name='site_root' value='' />
+          <param name='name' value='SueoyPasospordajunio&#47;SueoyPasosporda' />
+          <param name='tabs' value='no' />
+          <param name='toolbar' value='yes' />
+
+          <param
+            name='static_image'
+            value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Su&#47;SueoyPasospordajunio&#47;SueoyPasosporda&#47;1.png' />
+
+          <param name='animate_transition' value='yes' />
+          <param name='display_static_image' value='yes' />
+          <param name='display_spinner' value='yes' />
+          <param name='display_overlay' value='yes' />
+          <param name='display_count' value='yes' />
+          <param name='language' value='es-ES' />
+          <param name='filter' value='publish=yes' />
+
+        </object>
+
+      </div>
+
+      <script type='text/javascript'>
+
+        var divElement = document.getElementById('viz1788836427211');
+        var vizElement = divElement.getElementsByTagName('object')[0];
+
+        if ( divElement.offsetWidth > 800 ) {
+
+          vizElement.style.width='820px';
+          vizElement.style.height='587px';
+
+        } else if ( divElement.offsetWidth > 500 ) {
+
+          vizElement.style.width='820px';
+          vizElement.style.height='587px';
+
+        } else {
+
+          vizElement.style.width='100%';
+          vizElement.style.height='727px';
+
+        }
+
+        var scriptElement = document.createElement('script');
+
+        scriptElement.src =
+          'https://public.tableau.com/javascripts/api/viz_v1.js';
+
+        vizElement.parentNode.insertBefore(
+          scriptElement,
+          vizElement
+        );
+
+      </script>
+
+    </section>
+
+
+    <!-- TEXTO DESPUÉS DE TABLEAU -->
+
+    <div class="texto-despues-tableau">
+
+      <p>
+        Esperaba encontrar que los días que caminaba más, dormía más esa noche.
+        Sin embargo, los datos no lo confirman: la relación es prácticamente nula.
+        Mi sueño parece depender de otros factores y no de mi actividad física diaria —
+        probablemente influye más que suelo acostarme tarde y tengo que levantarme
+        entre las 8:10 y 8:30 para trabajar, sin importar cuánto caminé el día anterior.
       </p>
 
     </div>
